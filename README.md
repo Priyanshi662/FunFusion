@@ -1,7 +1,9 @@
 <h1 align="center"> mini-utility programs</h1>
+<div align="center">
 <a href="https://github.com/Priyanshi662/miniUtils/issues"><img src="https://img.shields.io/github/issues/Priyanshi662/miniUtils"></a>
 <a><img src="https://img.shields.io/github/forks/Priyanshi662/miniUtils"></a>
 <a><img src="https://img.shields.io/github/stars/Priyanshi662/miniUtils"></a>
+</div>
 ## Overview 
 
 The project contains mini utility programs which explore javascript,html and css. 
