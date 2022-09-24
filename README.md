@@ -4,6 +4,7 @@
 <a><img src="https://img.shields.io/github/forks/Priyanshi662/miniUtils"></a>
 <a><img src="https://img.shields.io/github/stars/Priyanshi662/miniUtils"></a>
 </div>
+
 ## Overview 
 
 The project contains mini utility programs which explore javascript,html and css. 
