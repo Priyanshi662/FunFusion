@@ -22,13 +22,14 @@ The project uses :
 
 ## Utilities 
 
-1.Canvas
-2.Analog Clock
-3.Drum kit
-4.Text to Speech
-5.Whack A Mole game
-6.Pokemon Generator Chrome Extension
-7.CitySearch
+The Utilities are :
+1. Canvas
+2. Analog Clock
+3. Drum kit
+4. Text to Speech
+5. Whack A Mole game
+6. Pokemon Generator Chrome Extension
+7. CitySearch
 
 ## How to run the project
 
