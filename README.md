@@ -20,6 +20,16 @@ The project uses :
 2. CSS : The styling effects for making the web page attractive
 3. Javascript  : The utility of the program is worked by using javascript
 
+## Utilities 
+
+1.Canvas
+2.Analog Clock
+3.Drum kit
+4.Text to Speech
+5.Whack A Mole game
+6.Pokemon Generator Chrome Extension
+7.CitySearch
+
 ## How to run the project
 
 The steps to run this project are:
