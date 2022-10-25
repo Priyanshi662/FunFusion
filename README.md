@@ -23,9 +23,15 @@ The project uses :
 ## Utilities 
 
 The Utilities are :
+<<<<<<< HEAD
 AI Utitlities :
 1. Tic-Tac-Toe using minimax algorithm
 Others : 
+=======
+AI Programs :
+   1. Tic-Tac-Toe using minimax algorithm
+Others :
+>>>>>>> c85c29fe68d02ec68ae1beb3a89b4f4b48837efa
 1. Canvas
 2. Analog Clock
 3. Drum kit
