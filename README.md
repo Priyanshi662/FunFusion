@@ -23,14 +23,10 @@ The project uses :
 ## Utilities 
 
 The Utilities are :
-<<<<<<< HEAD
-AI Utitlities :
-1. Tic-Tac-Toe using minimax algorithm
-Others : 
-=======
-AI Programs :
 
-   1. Tic-Tac-Toe using minimax algorithm
+AI Utitlities :
+
+1. Tic-Tac-Toe using minimax algorithm
 
 Others :
 
