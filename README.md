@@ -25,6 +25,7 @@ The project uses :
 The Utilities are :
 AI Programs :
    1. Tic-Tac-Toe using minimax algorithm
+Others :
 1. Canvas
 2. Analog Clock
 3. Drum kit
