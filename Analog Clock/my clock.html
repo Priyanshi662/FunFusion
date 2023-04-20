@@ -41,7 +41,7 @@
       <option value="-3">UTC-03:00</option>
       <option value="-2">UTC-02:00</option>
       <option value="-1">UTC-01:00</option>
-      <option value="0" selected>UTC</option>
+      <option value="0" >UTC</option>
       <option value="1">UTC+01:00</option>
       <option value="2">UTC+02:00</option>
       <option value="3">UTC+03:00</option>
@@ -49,7 +49,7 @@
       <option value="4">UTC+04:00</option>
       <option value="4.5">UTC+04:30</option>
       <option value="5">UTC+05:00</option>
-      <option value="5.5">UTC+05:30</option>
+      <option value="5.5" selected>UTC+05:30</option>
       <option value="5.75">UTC+05:45</option>
       <option value="6">UTC+06:00</option>
       <option value="6.5">UTC+06:30</option>
@@ -149,23 +149,24 @@
   const secondHand = document.querySelector('.second-hand');
   const minsHand = document.querySelector('.min-hand');
   const hourHand = document.querySelector('.hour-hand');
-  // const timezoneSelected = document.getElementById('.tzselect');
-  // timezoneSelected.addEventListener('change', updateTime);
+  const timezoneSelected = document.getElementById('tzselect');
+  console.log(timezoneSelected);
+  timezoneSelected.addEventListener('change', updateTime);
 
-  // function updateTime()
-  // {
-  //   const timezone=timezoneSelected.value;
-  //   const localTimezoneOffset = new Date().getTimezoneOffset() * 60000; // converting minutes to milliseconds
-  //   const selectedTimezoneOffset = timezoneValue * 3600000; // converting hours to milliseconds
-  //   const timeDifference = selectedTimezoneOffset + localTimezoneOffset;
-  //   const now = new Date(Date.now() + timeDifference);
-  //   setDate(now);
-  //   setTime(now);
-  // }
+  let now= new Date();
+  function updateTime()
+  {
+    const timezone=timezoneSelected.value;
+    const localTimezoneOffset = new Date().getTimezoneOffset() * 60000; // converting minutes to milliseconds
+    const selectedTimezoneOffset = timezone * 3600000; // converting hours to milliseconds
+    const timeDifference = selectedTimezoneOffset + localTimezoneOffset;
+    now = new Date(Date.now() + timeDifference);
+    setDate(now);
+    setTime(now);
+  }
 
   function setDate() {
-    const now = new Date();
-
+    
     const seconds = now.getSeconds();
     const secondsDegrees = ((seconds / 60) * 360) + 90;
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
@@ -181,7 +182,7 @@
   }
 
   function setTime() {
-    const now = new Date();
+    
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     document.querySelector(".timezone").textContent = timeZone;
      document.getElementById("bhour").innerHTML= now.getHours();
@@ -189,7 +190,11 @@
      document.getElementById("bsec").innerHTML = now.getSeconds();
   }
 
-  setInterval(setDate, 1000);
+  setInterval(()=>
+  {
+    updateTime(),
+    setDate()
+  }, 1000);
 
   setDate();
   
