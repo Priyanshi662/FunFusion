@@ -1,8 +1,8 @@
-<h1 align="center"> mini-utility programs</h1>
+<h1 align="center">Fun fusion</h1>
 <div align="center">
-<a href="https://github.com/Priyanshi662/miniUtils/issues"><img src="https://img.shields.io/github/issues/Priyanshi662/miniUtils"></a>
-<a><img src="https://img.shields.io/github/forks/Priyanshi662/miniUtils"></a>
-<a><img src="https://img.shields.io/github/stars/Priyanshi662/miniUtils"></a>
+<a href="https://github.com/Priyanshi662/FunFusion/issues"><img src="https://img.shields.io/github/issues/Priyanshi662/FunFusion"></a>
+<a><img src="https://img.shields.io/github/forks/Priyanshi662/FunFusion"></a>
+<a><img src="https://img.shields.io/github/stars/Priyanshi662/FunFusion"></a>
 </div>
 
 ## Overview 
