@@ -12,17 +12,13 @@
         <h3 class="heading">MY CANVAS</h3>
       </li>
       <li>
-                <label class="coloricon" for="color">Color:</label>
-                
-            </li>
-            <li>
-              <input type="color" id="color"/>
-            </li>
+                <label class="coloricon" for="color">color</label>
+                <input type="color" id="color"/>
     <li>
       <button class="btn" id="pen">Pen</button>
     </li>
     <li>
-      <label class="pensize" for="slider">Brush size:</label>
+      <label class="pensize" for="slider">Brush size</label>
       
     </li>
     <li>
@@ -30,9 +26,6 @@
     </li>
     <li>
       <button class="btn" id="eraser">Eraser</button>
-    </li>
-    <li>
-      <button class="btn" id="bucket">Bucket</button>
     </li>
 
   </ul>
@@ -123,10 +116,6 @@ r.addEventListener("click",function(){
   cursor.classList.add('eraser');
   console.log(icon);
 });
-
-document.getElementById('bucket').addEventListener("click",function(){
-  mode="bucket";
-});
 document.getElementById('slider').addEventListener("change", (e) =>
   ctx.lineWidth=slider.value);
 canvas.addEventListener('mousedown', (e) => {
@@ -171,29 +160,30 @@ li:last-child {
   z-index: 1000;
   }
   .heading{
-    color: white;
+    color: rgba(255, 71, 141, 0.988);
     font-size: 23px ;
   }
   .pensize{
     background-color: pink;
     border-radius: 4px;
     border: none;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
   }
   .coloricon{
     background-color: pink;
     border-radius: 4px;
+    padding: 10px;
     border: none;
     text-align: center;
     text-decoration: none;
   }
-  .pen{
-
-  }
   .btn{
     border-radius: 4px;
     font-size: 15px;
+    padding: 10px;
+    width: 60px;
     background-color: pink;
     border: none;
   text-align: center;
