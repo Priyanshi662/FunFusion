@@ -1,4 +1,4 @@
-<h1 align="center">Fun fusion</h1>
+<h1 align="center">Fun Fusion</h1>
 <div align="center">
 <a href="https://github.com/Priyanshi662/FunFusion/issues"><img src="https://img.shields.io/github/issues/Priyanshi662/FunFusion"></a>
 <a><img src="https://img.shields.io/github/forks/Priyanshi662/FunFusion"></a>
@@ -7,36 +7,51 @@
 
 ## Overview 
 
-The project contains mini utility programs which explore javascript,html and css. 
-Javascript,html and CSS are the first step in a web developer's journey to the domain.
-HTML is the basic structure of the web page, CSS is the styling effects to enhance the look of web page.
-Javascript is the brain of the web page which makes the website engaging to the user.
-Mini-Utility programs use javascript to engage users in sorts of tasks.
+The project contains mini utility programs which explore javascript,html and css to engage users in a variety of tasks.
+JavaScript, HTML and CSS are the first step in a web developer's journey.
+HTML is the 'what' of the web page, CSS is the style, and JavaScript is the 'how'.
 
-## TechStack used
+## Tech Stack
 
-The project uses :
-1. HTML : The basic structure of the web page
-2. CSS : The styling effects for making the web page attractive
-3. Javascript  : The utility of the program is worked by using javascript
+1. HTML : The basic structure of the web page.
+2. CSS : The styling effects for making the web page attractive.
+3. Javascript  : Ensures a smooth user experience by working the utility of the page.
 
 ## Utilities 
 
-The Utilities are :
+1. AI-Integrated Tic Tac Toe
+   - Engage in a tic tac toe against the computer
+   - Minimax algorithm used to decide computer moves ensures an entertaining gameplay.
 
-AI Utitlities :
-
-1. Tic-Tac-Toe using minimax algorithm
-
-Others :
-
-1. Canvas
-2. Analog Clock
-3. Drum kit
-4. Text to Speech
-5. Whack A Mole game
-6. Pokemon Generator Chrome Extension
-7. CitySearch
+2. Canvas
+   - Offers a simple yet interactive drawing experience.
+   - The draw function triggered by mouse movement, and implemented by capturing coordinates, makes for an user-friendly interface.
+   - A range of brushes, colors and tools are provided to meet your creative needs.
+     
+3. Analog Clock - Time in Style !
+   - Styled to provide an aesthetically pleasing user experience.
+   - Choose your time zone and get info accurate to the second.
+     
+4. Drum kit
+   - Experiment with a variety of sounds.
+   - Type in the key corresponding to the sound you want.
+     
+5. Text to Speech
+   - Convert text to speech with a single button.
+   - Options like pause, play and stop are provided for user convenience.
+     
+6. Whack A Mole game
+   - Engage in an amusing gameplay.
+   - Dynamic updation of scores.
+   - JavaScript events are used to enhance the interactivity.
+     
+7. Pokemon Generator Chrome Extension
+    - Clean UI
+    - Wide range of pokemon
+      
+8. CitySearch
+   - Type in a city to get its population.
+   -Dynamically filtered suggestions based on user input.
 
 ## How to run the project
 
