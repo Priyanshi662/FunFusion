@@ -51,7 +51,7 @@ HTML is the 'what' of the web page, CSS is the style, and JavaScript is the 'how
       
 8. CitySearch
    - Type in a city to get its population.
-   -Dynamically filtered suggestions based on user input.
+   - Dynamically filtered suggestions based on user input.
 
 ## How to run the project
 
