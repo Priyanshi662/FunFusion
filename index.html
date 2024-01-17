@@ -23,9 +23,12 @@
             padding: 20px;
             margin: 20px;
             text-align: center;
+            text-wrap: 10px;
             width: 200px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: inline-block;
+            margin-left: 33px;
+            font-size: 15px;
         }
 
         .card:hover {
@@ -48,8 +51,14 @@
         }
 
         .card button:hover {
-            background-color: #45a049;
-            transform: scale(1.1);
+            transform: translateY(-2px) scale(1.1);
+            box-shadow: 0 8px 16px #45a049;
+            background-color: white;
+            border:  10px #4CAF50;
+            color: #4CAF50;
+            border-radius: 8px;
+            transition: transform 0.25s ease;
+            font-weight: bold;
         }
 
         .card img {
