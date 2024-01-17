@@ -81,9 +81,10 @@ function mousePressed() {
 }
 
 function draw() {
-  background(255);
+  
+  background(252, 186, 3);
   strokeWeight(4);
-
+  
   line(w, 0, w, height);
   line(w * 2, 0, w * 2, height);
   line(0, h, width, h);
@@ -110,11 +111,18 @@ function draw() {
   if (result != null) {
     noLoop();
     let resultP = createP('');
+    
+    //styles here, classList.add didnt work
     resultP.style('font-size', '32pt');
+    resultP.style('width','fit-content');
+    resultP.style('margin','auto');
+    resultP.style('padding-top','20pt');
+    resultP.style('color', 'rgb(32,28,44)');
+    //end of styles
     if (result == 'tie') {
       resultP.html('Tie!');
     } else {
-      resultP.html(`${result} wins!`);
+      resultP.html(`${result} Wins!`);
     }
   }
 }
