@@ -71,12 +71,72 @@
         .card:hover img {
             transform: scale(1.1);
         }
+
+        #toggelBtn{
+            display: none;
+            cursor: pointer;
+        }
+
+    
+        .Sidebar {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: -290px;
+            width: 250px;
+            height: 100%;
+            background-color: #afffa5;
+            padding: 20px;
+            transition: right 0.3s ease-in-out;
+        }
+
+        .CloseButton {
+            cursor: pointer;
+            position: absolute;
+            top: 35px;
+            right: 30px;
+            color: #000;
+            font-size: 20px;
+        }
+
+        @media (width < 600px){
+            #toggelBtn{
+                display: inline;
+                text-align: center;
+            }
+
+            #sidebar{
+                display: inline;
+            }
+            .Header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            h1{
+                margin: 0;
+                padding: 0;
+            }
+            
+            .Sidebar {
+                right: -300px; /* Adjusted for better responsiveness */
+            }
+        }
     </style>
 </head>
 
 <body>
+    
     <div class="Header">
         <h1>Fun Fusion</h1>
+        <div id="toggelBtn" onclick="openSidebar()">&#9776;</div>
+    </div>
+
+    <div class="Sidebar" id="sidebar">
+        <div class="CloseButton" onclick="closeSidebar()">&times;</div>
+        <!-- Sidebar content goes here -->
+        <p>Sidebar Content</p>
     </div>
     <!-- Card for navigation -->
     <div class="card">
@@ -140,6 +200,17 @@
         <!-- Button to navigate to page1.html -->
         <button onclick="window.location.href='Memory Game/index.html'">Go!</button><br>
     </div>
+
+    <script>
+        // JavaScript to handle sidebar functionality
+        function openSidebar() {
+            document.getElementById('sidebar').style.right = '0';
+        }
+
+        function closeSidebar() {
+            document.getElementById('sidebar').style.right = '-300px';
+        }
+    </script>
 </body>
 
 </html>
