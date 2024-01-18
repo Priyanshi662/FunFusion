@@ -1,0 +1,5 @@
+After the adding the game add the game name and author :
+
+--------------------------------------------------------
+| GAME NAME              |                 AUTHOR NAME  |
+---------------------------------------------------------
