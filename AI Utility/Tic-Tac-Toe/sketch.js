@@ -14,6 +14,7 @@ let currentPlayer = human;
 
 function setup() {
   createCanvas(400, 400);
+  background(0);
   w = width / 3;
   h = height / 3;
   // Turn of Ai is first here :
@@ -82,7 +83,7 @@ function mousePressed() {
 
 function draw() {
   
-  background(252, 186, 3);
+  background(80);
   strokeWeight(4);
   
   line(w, 0, w, height);
@@ -126,6 +127,12 @@ function draw() {
     }
   }
 }
+
+
+
+
+
+
 
 
 /* function how the game would look like without AI :
