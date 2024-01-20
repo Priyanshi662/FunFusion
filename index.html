@@ -8,7 +8,232 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+
+        .main-container {
+            min-height: 100vh;
+            width: 100vw;
+            background-color: transparent;
+            background: url('./pexels-pixabay-220072.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            min-height: 100vh;
+            width: 80vw;
+            backdrop-filter: blur(20px);
+            margin-bottom: 2rem;
+        }
+
+        .header {
+            gap: 1.5rem;
+            height: auto;
+            width: 100%;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: rgb(247, 244, 244);
+            text-shadow: 0px 0px 20px rgb(237, 52, 148), 0px 0px 40px rgb(237, 52, 148), 0px 0px 60px rgb(237, 52, 148), 0px 0px 80px rgb(237, 52, 148);
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .main-heading {
+            font-size: 3rem;
+            position: relative;
+        }
+
+
+
+        .second-heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #F {
+            font-size: 6rem;
+        }
+
+        #U {
+            color: rgb(7, 238, 111);
+            text-shadow: 0px 0px 20px rgb(0, 251, 96), 0px 0px 40px rgb(0, 251, 96), 0px 0px 60px rgb(0, 251, 96), 0px 0px 80px rgb(0, 251, 96);
+            animation-delay: 1s;
+        }
+
+        #N {
+            color: rgb(234, 226, 11);
+            text-shadow: 0px 0px 20px rgb(242, 210, 0), 0px 0px 40px rgb(242, 210, 0), 0px 0px 60px rgb(242, 210, 0), 0px 0px 80px rgb(242, 210, 0);
+            animation-delay: 2s;
+        }
+
+        #S {
+            color: rgb(255, 39, 212);
+            text-shadow: 0px 0px 20px rgb(238, 7, 103), 0px 0px 40px rgb(238, 7, 103), 0px 0px 60px rgb(238, 7, 103), 0px 0px 80px rgb(238, 7, 103);
+            animation-delay: 3s;
+        }
+
+        #O {
+            color: rgb(13, 255, 178);
+            text-shadow: 0px 0px 20px rgb(5, 255, 13), 0px 0px 40px rgb(5, 255, 13), 0px 0px 60px rgb(5, 255, 13), 0px 0px 80px rgb(5, 255, 13);
+            animation-delay: 4s;
+        }
+
+        span {
+            position: relative;
+            font-size: 4rem;
+            animation-name: animate1;
+            animation-iteration-count: infinite;
+            animation-duration: 2.5s;
+        }
+
+        .card-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .card-button a {
+            text-decoration: none;
+            padding: 2rem 4rem;
+            font-size: 2.5rem;
+            color: black;
+            font-weight: 600;
+            background-color: rgb(255, 237, 33);
+            opacity: 1;
+            border-radius: 1rem;
+            transition: all 0.1s ease-in-out;
+        }
+
+        a:hover {
+            background-color: rgb(255, 241, 86);
+            transition: all 0.1s ease-in-out;
+            transform: scale(1.02);
+            box-shadow: 0px 0px 40px rgb(255, 237, 33), 0px 0px 80px rgb(255, 237, 33), 0px 0px 100px rgb(255, 237, 33);
+            transition: all 0.1s ease-in-out;
+        }
+
+
+        .card-container {
+            width: 100%;
+            height: auto;
+            padding: 10px 5px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            height: auto;
+            width: auto;
+            box-shadow: 0px 0px 20px rgb(139, 11, 126), 0px 0px 40px rgb(139, 11, 126);
+            border-radius: 1rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            gap: 1.5rem;
+            backdrop-filter: blur(100px);
+            padding: 10px 10px;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .card img {
+            width: 15rem;
+            height: 20rem;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 1rem;
+            border: 2px solid white;
+        }
+
+        .card:hover {
+            transform: scale(1.01);
+            transition: all 0.1s ease-in-out;
+        }
+
+        .card p {
+            font-size: 1.5rem;
+            color: rgb(255, 255, 255);
+            margin-bottom: 1rem;
+            height: auto;
+            font-weight: 800;
+            text-shadow: 0px 0px 10px rgb(139, 11, 126), 0px 0px 40px rgb(139, 11, 126);
+        }
+
+        .card a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            border: 2px solid white;
+            padding: 0.5rem 1rem;
+            background-color: white;
+            color: blueviolet;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        @media screen and (max-width : 780px) {
+
+            .main-heading,
+            span {
+                font-size: 2rem;
+            }
+
+            #F {
+                font-size: 4rem;
+            }
+
+            .second-heading {
+                flex-direction: column;
+            }
+
+            .card-button a {
+                padding: 1rem 2rem;
+                font-size: 1.5rem;
+            }
+        }
+
+
+        @keyframes animate1 {
+            0% {
+                top: 0;
+            }
+
+            50% {
+                top: -25px;
+            }
+
+            100% {
+                top: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
