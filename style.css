@@ -1,0 +1,116 @@
+.Header {
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card {
+    background: linear-gradient(to bottom, #45a049, #acf7af);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    text-wrap: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-left: 33px;
+    font-size: 15px;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px #45a049;
+  }
+
+  .card button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .card button:hover {
+    transform: translateY(-2px) scale(1.1);
+    box-shadow: 0 8px 16px #45a049;
+    background-color: white;
+    border: 10px #4caf50;
+    color: #4caf50;
+    border-radius: 8px;
+    transition: transform 0.25s ease;
+    font-weight: bold;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 150px;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover img {
+    transform: scale(1.1);
+  }
+
+  #toggelBtn {
+    display: none;
+    cursor: pointer;
+  }
+
+  .Sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -290px;
+    width: 250px;
+    height: 100%;
+    background-color: #afffa5;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .CloseButton {
+    cursor: pointer;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    color: #000;
+    font-size: 20px;
+  }
+
+  @media (width < 600px) {
+    #toggelBtn {
+      display: inline;
+      text-align: center;
+    }
+
+    #sidebar {
+      display: inline;
+    }
+    .Header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .Sidebar {
+      right: -300px; /* Adjusted for better responsiveness */
+    }
+  }
