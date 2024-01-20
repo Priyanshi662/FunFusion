@@ -5,7 +5,236 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cards Section</title>
-    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+
+        .main-container {
+            min-height: 100vh;
+            width: 100vw;
+            background-color: transparent;
+            background: url('./pngtree-powder-smoke-colorful-background-image_2164096.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            min-height: 100vh;
+            width: 80vw;
+            backdrop-filter: blur(20px);
+            margin-bottom: 2rem;
+        }
+
+        .header {
+            gap: 1.5rem;
+            height: auto;
+            width: 100%;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: rgb(247, 244, 244);
+            text-shadow: 0px 0px 20px rgb(237, 52, 148), 0px 0px 40px rgb(237, 52, 148), 0px 0px 60px rgb(237, 52, 148), 0px 0px 80px rgb(237, 52, 148);
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .main-heading {
+            font-size: 3rem;
+            position: relative;
+            /* animation-name: animate1;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out; */
+        }
+
+
+
+        .second-heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* animation-name: animate1;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out; */
+        }
+
+        #F {
+            font-size: 6rem;
+        }
+
+        #U {
+            color: rgb(7, 238, 111);
+            text-shadow: 0px 0px 20px rgb(0, 251, 96), 0px 0px 40px rgb(0, 251, 96), 0px 0px 60px rgb(0, 251, 96), 0px 0px 80px rgb(0, 251, 96);
+            animation-delay: 1s;
+        }
+
+        #N {
+            color: rgb(234, 226, 11);
+            text-shadow: 0px 0px 20px rgb(242, 210, 0), 0px 0px 40px rgb(242, 210, 0), 0px 0px 60px rgb(242, 210, 0), 0px 0px 80px rgb(242, 210, 0);
+            animation-delay: 2s;
+        }
+
+        #S {
+            color: rgb(255, 39, 212);
+            text-shadow: 0px 0px 20px rgb(238, 7, 103), 0px 0px 40px rgb(238, 7, 103), 0px 0px 60px rgb(238, 7, 103), 0px 0px 80px rgb(238, 7, 103);
+            animation-delay: 3s;
+        }
+
+        #O {
+            color: rgb(13, 255, 178);
+            text-shadow: 0px 0px 20px rgb(5, 255, 13), 0px 0px 40px rgb(5, 255, 13), 0px 0px 60px rgb(5, 255, 13), 0px 0px 80px rgb(5, 255, 13);
+            animation-delay: 4s;
+        }
+
+        span {
+            position: relative;
+            font-size: 4rem;
+            animation-name: animate1;
+            animation-iteration-count: infinite;
+            animation-duration: 2.5s;
+        }
+
+        .card-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .card-button a {
+            text-decoration: none;
+            padding: 2rem 4rem;
+            font-size: 2.5rem;
+            color: black;
+            font-weight: 600;
+            background-color: rgb(255, 237, 33);
+            opacity: 1;
+            border-radius: 1rem;
+            transition: all 0.1s ease-in-out;
+        }
+
+        a:hover {
+            background-color: rgb(255, 241, 86);
+            transition: all 0.1s ease-in-out;
+            transform: scale(1.02);
+            box-shadow: 0px 0px 40px rgb(255, 237, 33), 0px 0px 80px rgb(255, 237, 33), 0px 0px 100px rgb(255, 237, 33);
+        }
+
+
+        .card-container {
+            width: 100%;
+            height: auto;
+            padding: 10px 5px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            height: auto;
+            width: auto;
+            box-shadow: 0px 0px 20px rgb(255, 255, 255), 0px 0px 40px rgb(255, 255, 255);
+            border-radius: 1rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            gap: 1.5rem;
+            backdrop-filter: blur(100px);
+            padding: 10px 10px;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .card img {
+            width: 15rem;
+            height: 20rem;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 1rem;
+            border: 2px solid white;
+        }
+
+        .card:hover {
+            transform: scale(1.01);
+        }
+
+        .card p {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            height: auto;
+        }
+
+        .card a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            border: 2px solid white;
+            padding: 0.5rem 1rem;
+            background-color: white;
+            color: blueviolet;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        @media screen and (max-width : 780px) {
+
+            .main-heading,
+            span {
+                font-size: 2rem;
+            }
+
+            #F {
+                font-size: 4rem;
+            }
+
+            .second-heading {
+                flex-direction: column;
+            }
+
+            .card-button a {
+                padding: 1rem 2rem;
+                font-size: 1.5rem;
+            }
+        }
+
+
+        @keyframes animate1 {
+            0% {
+                top: 0;
+            }
+
+            50% {
+                top: -25px;
+            }
+
+            100% {
+                top: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -28,59 +257,47 @@
                 </div>
             </div>
 
-            <!-- This is the Card Container -->
             <div class="card-container">
-
-                <!-- Insert New cards in each card div -->
-
                 <div class="card">
                     <img src="Canvas/drawing-pad.png" alt="">
                     <p class="description">Drawing Board</p>
                     <a href="Canvas/Mycanvas.html" class="link-button">GO</a>
                 </div>
-
                 <div class="card">
                     <img src="Analog Clock/clock.png" alt="">
                     <p class="description">Analog Clock</p>
                     <a href="Analog Clock/my clock.html" class="link-button">GO</a>
                 </div>
-
                 <div class="card">
                     <img src="AI Utility/tictactoe.png" alt="">
                     <p class="description">Tic-Tac-Toe</p>
                     <a href="AI Utility/Tic-Tac-Toe/index.html" class="link-button">GO</a>
                 </div>
-
                 <div class="card">
                     <img src="citysearch/citysearch.png" alt="">
                     <p class="description">City Search</p>
                     <a href="citysearch/searchcities.html" class="link-button">GO</a>
                 </div>
-
                 <div class="card">
                     <img src="Drum kit/background.jpg" alt="">
                     <p class="description">Drum Kit</p>
                     <a href="Drum kit/Drum set.html" class="link-button">GO</a>
                 </div>
-
                 <div class="card">
                     <img src="Pokemon generator/pokemon.png" alt="">
                     <p class="description">Pokemon Generator</p>
                     <a href="Pokemon generator/window.html" class="link-button">GO</a>
                 </div>
-
                 <div class="card">
                     <img src="text to speech/texttospeech.png" alt="">
                     <p class="description">Text-To-Speech</p>
                     <a href="text to speech/text-to-speech.html" class="link-button">GO</a>
                 </div>
-
                 <div class="card">
                     <img src="Whack A Mole/whackmole.png" alt="">
                     <p class="description">Whack a Mole</p>
                     <a href="Whack A Mole/index.html" class="link-button">GO</a>
                 </div>
-                
             </div>
         </div>
     </div>
