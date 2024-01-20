@@ -1,0 +1,405 @@
+//data
+const characters = [
+  {
+    name: ["Naruto", "Naruto Uzumaki", "Uzumaki Naruto"],
+    hints: [
+      "One of the main characters",
+      "Loves Ichiraku Ramen",
+      "Believe it!",
+      "Sexy Jutsu",
+      "7th Hokage"
+    ],
+    image: "./Assate/naruto_ai.jpg"
+  },
+  {
+    name: ["Sasuke", "Sasuke Uchiha", "Uchiha Sasuke"],
+    hints: [
+      "Rival of Naruto",
+      "Part of Team 7",
+      "Sharingan user",
+      "Seeking power and revenge",
+      "Last of the Uchiha clan"
+    ],
+    image: "./Assate/sasuke_ai.jpg"
+  },
+  {
+    name: ["Sakura", "Sakura Haruno", "Haruno Sakura"],
+    hints: [
+      "Member of Team 7",
+      "Skilled medical ninja",
+      "Has a crush on Sasuke",
+      "Ino's rival",
+      "Has exceptional chakra control"
+    ],
+    image: "data:image/jpeg;base64,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"
+  },
+  {
+    name: ["Kakashi", "Kakashi Hatake", "Hatake Kakashi"],
+    hints: [
+      "Former ANBU captain",
+      "Uses the Sharingan",
+      "Has a book called 'Make-Out Paradise'",
+      "Copy Ninja",
+      "Taught Team 7"
+    ],
+    image: "https://i.pinimg.com/1200x/fc/71/dc/fc71dcd3ea6c2bcd9a8b9364d87d308a.jpg"
+  },
+  {
+    name: ["Jiraiya"],
+    hints: [
+      "Legendary Sannin",
+      "Master of Naruto",
+      "Author of 'Make-Out Paradise'",
+      "Toad Sage",
+      "Has the Summoning Jutsu"
+    ],
+    image: "https://wallpaperset.com/w/full/6/7/e/67951.jpg"
+  },
+  {
+    name: ["Orochimaru"],
+    hints: [
+      "Former member of the Legendary Sannin",
+      "Uses snake-related jutsu",
+      "Seeks immortality",
+      "Formerly of the Hidden Leaf Village",
+      "Wants Sasuke's body"
+    ],
+    image: "https://wallpapercave.com/wp/wp2801127.jpg"
+  },
+  {
+    name: ["Hinata", "Hinata Hyuga", "Hyuga Hinata"],
+    hints: [
+      "Member of the Hyuga clan",
+      "Has a gentle disposition",
+      "Has a crush on Naruto",
+      "Byakugan user",
+      "Develops the Gentle Fist technique"
+    ],
+    image: "https://e0.pxfuel.com/wallpapers/922/331/desktop-wallpaper-hinata-hyuga-eye-hair.jpg"
+  },
+  {
+    name: ["Shikamaru", "Shikamaru Nara", "Nara Shikamaru"],
+    hints: [
+      "Lazy but highly intelligent",
+      "Strategic thinker",
+      "Part of Team 10",
+      "Shadow Manipulation Jutsu user",
+      "Becomes a Chunin during the Chunin Exams"
+    ],
+    image: "https://wallpapercave.com/wp/wp2820322.jpg"
+  },
+  {
+    name: ["Gaara"],
+    hints: [
+      "Former Jinchuriki of One-Tail",
+      "Kazekage of the Hidden Sand Village",
+      "Initially an antagonist",
+      "Has control over sand",
+      "Had a traumatic childhood"
+    ],
+    image: "data:image/jpeg;base64,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"
+  },
+  {
+    name: ["Rock Lee", "Lee", "Rock"],
+    hints: [
+      "Taijutsu specialist",
+      "Cannot use ninjutsu or genjutsu",
+      "Wears green jumpsuit",
+      "Disciple of Might Guy",
+      "Believes in hard work over natural talent"
+    ],
+    image: "https://w0.peakpx.com/wallpaper/775/793/HD-wallpaper-rock-lee-naruto-hinata-taijitsu-naruto-shippuden-akatsuki-might-gai.jpg"
+  },
+  {
+    name: ["Neji", "Neji Hyuga", "Hyuga Neji"],
+    hints: [
+      "Member of the Hyuga clan",
+      "Byakugan user",
+      "Initially holds a grudge against Hinata",
+      "Fate determined by destiny",
+      "Develops the Eight Trigrams Sixty-Four Palms technique"
+    ],
+    image: "https://w0.peakpx.com/wallpaper/494/772/HD-wallpaper-neji-electric-blue-art-neji-hyuga-neji-hyuga-neji-thumbnail.jpg"
+  },
+  {
+    name: ["Tenten"],
+    hints: [
+      "Weapon specialist",
+      "Part of Team Guy",
+      "Proficient in various ninja tools",
+      "Uses summoning scrolls",
+      "Aspires to be like legendary weaponsmiths"
+    ],
+    image: "https://wallpapercave.com/wp/wp6386189.jpg"
+  },
+  {
+    name: ["Kiba", "Kiba Inuzuka", "Inuzuka Kiba"],
+    hints: [
+      "Member of the Inuzuka clan",
+      "Has a dog companion named Akamaru",
+      "Uses beast-like taijutsu",
+      "Has enhanced sense of smell",
+      "Part of Team 8"
+    ],
+    image: "data:image/jpeg;base64,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"
+  },
+  {
+    name: ["Shino", "Shino Aburame", "Aburame Shino"],
+    hints: [
+      "Member of the Aburame clan",
+      "Uses insects as weapons",
+      "Has a stoic personality",
+      "Part of Team 8",
+      "Masters the Parasitic Giant Beetle Jutsu"
+    ],
+    image: "https://wallpaperaccess.com/full/7188775.jpg"
+  },
+  {
+    name: ["Ino", "Ino Yamanaka", "Yamanaka Ino"],
+    hints: [
+      "Part of Team 10",
+      "Has mind-transfer jutsu",
+      "Has a rivalry with Sakura",
+      "Works at a flower shop",
+      "Uses her family's clan techniques"
+    ],
+    image: "https://wallpapercave.com/wp/wp7668970.jpg"
+  },
+  {
+    name: ["Choji", "Choji Akimichi", "Akimichi Choji"],
+    hints: [
+      "Part of Team 10",
+      "Has a love for food",
+      "Uses Human Bullet Tank jutsu",
+      "Member of the Akimichi clan",
+      "Struggles with self-confidence"
+    ],
+    image: "https://w0.peakpx.com/wallpaper/808/800/HD-wallpaper-choji-naruto.jpg"
+  },
+  {
+    name: ["Tsunade"],
+    hints: [
+      "Legendary Sannin",
+      "Fifth Hokage",
+      "Master of medical ninjutsu",
+      "Has incredible strength",
+      "Has a fear of blood"
+    ],
+    image: "https://w0.peakpx.com/wallpaper/32/738/HD-wallpaper-tsunade-naruto-naruto-shipudden.jpg"
+  },
+  {
+    name: ["Jugo"],
+    hints: [
+      "Possesses Sage Transformation",
+      "Has a volatile and unpredictable nature",
+      "Part of Sasuke's team",
+      "Has the ability to absorb natural energy",
+      "Cursed with uncontrollable rage"
+    ],
+    image: "https://images5.alphacoders.com/680/680848.jpg"
+  },
+  {
+    name: ["Suigetsu"],
+    hints: [
+      "Swordsman",
+      "Can turn his body into liquid",
+      "Part of Sasuke's team",
+      "Desires to reform the Seven Ninja Swordsmen",
+      "Wants to collect all the swords"
+    ],
+    image: "https://w0.peakpx.com/wallpaper/314/777/HD-wallpaper-naruto-suigetsu-h%C5%8Dzuki.jpg"
+  },
+  {
+    name: ["Karin"],
+    hints: [
+      "Has sensory abilities",
+      "Part of Sasuke's team",
+      "Fiercely loyal to Sasuke",
+      "Has healing abilities",
+      "Has a past with Orochimaru"
+    ],
+    image: "https://w0.peakpx.com/wallpaper/744/405/HD-wallpaper-karin-aesthetic-naruto.jpg"
+  },
+  {
+    name: ["Itachi", "Itachi Uchiha", "Uchiha Itachi"],
+    hints: [
+      "Sasuke's older brother",
+      "Former ANBU captain",
+      "Massacred the Uchiha clan",
+      "Has the Mangekyo Sharingan",
+      "Sacrificed himself for the village"
+    ],
+    image: "https://c4.wallpaperflare.com/wallpaper/100/30/528/anime-naruto-itachi-uchiha-wallpaper-preview.jpg"
+  },
+  {
+    name: ["Kisame"],
+    hints: [
+      "Swordsman",
+      "Partnered with Itachi",
+      "Member of the Akatsuki",
+      "Has shark-like features",
+      "Uses Samehada as his weapon"
+    ],
+    image: "https://wallpapercave.com/wp/wp2733492.jpg"
+  },
+  {
+    name: ["Pain", "Nagato", "Yahiko"],
+    hints: [
+      "Leader of the Akatsuki",
+      "Possesses the Rinnegan",
+      "Former student of Jiraiya",
+      "Believes in achieving peace through pain",
+      "Uses the Six Paths of Pain technique"
+    ],
+    image: "https://e0.pxfuel.com/wallpapers/124/730/desktop-wallpaper-pain-yahiko-naruto-resolution-anime-and-background-1080x2340-naruto-thumbnail.jpg"
+  },
+  {
+    name: ["Konan"],
+    hints: [
+      "Member of the Akatsuki",
+      "Uses paper-based jutsu",
+      "Has an affinity for origami",
+      "Devoted to Yahiko's ideals",
+      "Childhood friend of Yahiko and Nagato"
+    ],
+    image: "https://images3.alphacoders.com/977/977507.png"
+  },
+  {
+    name: ["Deidara"],
+    hints: [
+      "Uses explosive clay as a weapon",
+      "Member of the Akatsuki",
+      "Artistic approach to battles",
+      "Has mouths on his palms",
+      "Fights using long-range techniques"
+    ],
+    image: "https://i.pinimg.com/originals/4d/7a/b5/4d7ab5e28723cc1125faf8499f0d78ef.jpg"
+  },
+  {
+    name: ["Sai"],
+    hints: [
+      "Part of Team 7",
+      "Uses ink-based jutsu",
+      "Initially lacks emotions",
+      "Skilled in espionage",
+      "Joins Team 7 after Sasuke's departure"
+    ],
+    image: "https://i.pinimg.com/736x/14/22/8a/14228ab6c38d1611922f32c593e36cc1.jpg"
+  },
+  {
+    name: ["Yamato"],
+    hints: [
+      "An ANBU captain",
+      "Has Wood Style jutsu",
+      "Trained to suppress Nine-Tails' chakra in Naruto",
+      "Assigned to Team 7 as a replacement for Kakashi",
+      "Uses Hashirama Senju's cells"
+    ],
+    image: "https://e0.pxfuel.com/wallpapers/672/902/desktop-wallpaper-yamato-naruto-thumbnail.jpg"
+  },
+  {
+    name: ["Kurenai", "Kurenai Yuhi", "Yuhi Kurenai"],
+    hints: [
+      "Genjutsu specialist",
+      "Part of Team 8",
+      "Has a child with Asuma",
+      "Trains Hinata in genjutsu",
+      "Initially has a romantic interest in Asuma"
+    ],
+    image: "https://c4.wallpaperflare.com/wallpaper/866/838/518/naruto-yuuhi-kurenai-girl-brunette-wallpaper-preview.jpg"
+  },
+  {
+    name: ["Asuma", "Asuma Sarutobi", "Sarutobi Asuma"],
+    hints: [
+      "Son of the Third Hokage",
+      "Part of Team 10",
+      "Wields trench knives",
+      "Has a child with Kurenai",
+      "Trains Shikamaru in shogi"
+    ],
+    image: "https://avatarfiles.alphacoders.com/321/321291.jpg"
+  },
+  {
+    name: ["Iruka", "Iruka Umino", "Umino Iruka"],
+    hints: [
+      "Academy instructor",
+      "Cares for Naruto like a father figure",
+      "Survivor of the Nine-Tails attack",
+      "Kind-hearted and understanding",
+      "Helps Naruto graduate from the Academy"
+    ],
+    image: "https://wallpapercave.com/wp/wp2230227.jpg"
+  },
+  {
+    name: ["Zabuza"],
+    hints: [
+      "Demon of the Hidden Mist",
+      "Carries a massive sword",
+      "Hired as a mercenary",
+      "Has a strong bond with Haku",
+      "Fights Kakashi during the Land of Waves arc"
+    ],
+    image: "https://i.pinimg.com/736x/eb/19/32/eb1932a0b98ea5bf6059344c1fe62b48.jpg"
+  },
+  {
+    name: ["Haku"],
+    hints: [
+      "Has ice-based kekkei genkai",
+      "Assists Zabuza",
+      "Seems delicate but is a skilled fighter",
+      "Feels a strong loyalty to Zabuza",
+      "Has tragic past"
+    ],
+    image: "https://w0.peakpx.com/wallpaper/766/595/HD-wallpaper-haku-naruto.jpg"
+  }
+];
+
+//Game
+let currentCharacter;
+let score = 0;
+let highestScore = 0;
+let attemptCount = 0;
+
+function startGame() {
+  document.getElementById('score').innerText = `Score : ${score}`;
+  document.getElementById('message').textContent = "";
+  document.getElementById('imageContainer').innerHTML = "<div></div>";
+  attemptCount = 0;
+  const randomIndex = Math.floor(Math.random() * characters.length);
+  currentCharacter = characters[randomIndex];
+  console.log(currentCharacter);
+  document.getElementById('hint').textContent = `Hint 1: ${currentCharacter.hints[0]}`;
+}
+
+function checkAnswer() {
+  const guess = document.getElementById('guessInput').value.toLowerCase();
+  console.log(guess);
+  if (currentCharacter.name.some((el) => (el.toLowerCase() == guess))) {
+    document.getElementById("start").innerText = "Continue Playing";
+    score += (25 - (attemptCount * 5));
+    highestScore = Math.max(highestScore, score);
+    document.getElementById('high-score').innerText = `Highest Score : ${highestScore}`;
+    document.getElementById('score').innerText = `Score : ${score}`;
+    document.getElementById('message').textContent = "Congratulations! You guessed it right!";
+    const characterImage = document.createElement("img");
+    characterImage.src = currentCharacter.image;
+    document.getElementById('imageContainer').appendChild(characterImage);
+    document.getElementById('hint').textContent = '';
+  } else {
+    attemptCount++;
+    if (attemptCount >= 5) {
+      document.getElementById('message').textContent = `Sorry! You've run out of attempts. The correct answer is ${currentCharacter.name[0]}`;
+      highestScore = Math.max(highestScore, score);
+      score = 0;
+      document.getElementById('score').innerText = `Score : ${score}`;
+      document.getElementById('high-score').innerText = `Highest Score : ${highestScore}`;
+      document.getElementById("start").innerText = "Start Game";
+      document.getElementById('hint').textContent = '';
+    } else {
+      const hintNumber = attemptCount + 1;
+      document.getElementById('hint').textContent = `Hint ${hintNumber}: ${currentCharacter.hints[hintNumber - 1]}`;
+      document.getElementById('message').textContent = "Wrong answer! Try again.";
+    }
+  }
+  document.getElementById('guessInput').value = '';
+}
