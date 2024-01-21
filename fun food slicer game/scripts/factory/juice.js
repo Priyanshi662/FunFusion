@@ -1,6 +1,4 @@
-/**
- * 果汁
- */
+
 var Ucren = require( "../lib/ucren" );
 var layer = require( "../layer" ).getLayer("juice");
 var timeline = require( "../timeline" ).use( "juice" ).init( 10 );

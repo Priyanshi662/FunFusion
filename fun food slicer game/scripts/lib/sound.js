@@ -1,15 +1,4 @@
-/**
- * 简易声效控制
- */
 
-/**
- * 使用方法：
- * 
- * var sound = require( "sound/main" );
- * 
- * var snd = sound.create("sounds/myfile");
- * snd.play();
- */
 
 var buzz = require( "buzz" );
 var supported = buzz.isSupported();

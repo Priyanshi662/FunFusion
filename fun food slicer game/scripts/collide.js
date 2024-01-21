@@ -3,9 +3,7 @@ var Ucren = require( "lib/ucren" );
 
 var fruits = fruit.getFruitInView();
 
-/**
- * 碰撞检测
- */
+
 
 exports.check = function( knife ){
 	var ret = [], index = 0;
@@ -41,9 +39,9 @@ function equation12( a, b, c ){
 		return [ (-1 * b + Math.sqrt(delta)) / (2 * a),  (-1 * b - Math.sqrt(delta)) / (2 * a) ];
 }
 
-// 返回线段和椭圆的两个交点，如果不相交，返回 null
+
 function lineXEllipse( p1, p2, c, r, e ){
-	// 线段：p1, p2    圆心：c    半径：r    离心率：e
+	
 	if (r <= 0) return;
 	e = e === undefined ? 1 : e;
 	var t1 = r, t2 = r * e, k;
@@ -73,7 +71,7 @@ function lineXEllipse( p1, p2, c, r, e ){
 	return result;
 }
 
-// 判断计算线段和椭圆是否相交
+
 function lineInEllipse( p1, p2, c, r, e ){
 	var t = lineXEllipse( p1, p2, c, r, e );
 	return t && ( t[0] || t[1] );

@@ -86,7 +86,6 @@ exports.scaleImage = function( image ){
     });
 };
 
-// 显示/隐藏 相关
 
 exports.onTimeUpdate = function( time, mode, x1s, x1e, x2s, x2e, x3s, x3e ){
     o1.attr( "x", anim( time, x1s, x1e - x1s, animLength ) );

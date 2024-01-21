@@ -8,9 +8,7 @@ var anim = tween.exponential.co;
 
 var message = require( "../message" );
 
-/**
- * 分数模块
- */
+
 
 var image, text1, text2, animLength = 500;;
 
@@ -51,7 +49,7 @@ exports.number = function( number ){
     // message.postMessage( number, "score.change" );
 };
 
-// 显示/隐藏 相关
+
 
 exports.onTimeUpdate = function( time, mode, isx, iex, t1sx, t1ex, t2sx, t2ex ){
     image.attr( "x", anim( time, isx, iex - isx, animLength ) );

@@ -1,6 +1,3 @@
-/**
- * 炸弹爆炸时的光线
- */
 
 var layer = require( "../layer" );
 

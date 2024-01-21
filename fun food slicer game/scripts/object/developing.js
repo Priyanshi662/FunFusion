@@ -5,9 +5,7 @@ var message = require( "../message" );
 
 var exponential = tween.exponential.co;
 
-/**
- * "coming soon" 模块
- */
+
 
 exports.anims = [];
 
@@ -33,7 +31,7 @@ exports.hide = function( start ){
 	});
 };
 
-// 显示/隐藏 相关
+
 
 exports.onZoomStart = function(){
 	this.image.show();

@@ -45,7 +45,7 @@ exports.jump = function(){
     timeline.createTask({ start: 0, duration: -1, object: this, onTimeUpdate: this.onJumping, recycle: this.anims });
 };
 
-// 显示相关
+
 
 exports.onShowStart = function(){
 };
@@ -63,7 +63,7 @@ exports.onShowEnd = function(){
     this.jump();
 };
 
-// 跳跃相关
+
 
 exports.onJumping = function(time){
 	var t = parseInt(time / cycleTime);

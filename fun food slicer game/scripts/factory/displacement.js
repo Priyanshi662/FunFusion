@@ -2,9 +2,6 @@ var layer = require( "../layer" );
 var timeline = require( "../timeline" );
 var tween = require( "../lib/tween" );
 
-/**
- * 位移类模块模型
- */
 
 exports.create = function( imageSrc, width, height, origX, origY, targetX, targetY, animMap, animDur ){
 	var module = {};
