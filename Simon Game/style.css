@@ -1,0 +1,42 @@
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.play{
+    height: 360px;
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.play div{
+    height: 150px;
+    width: 150px;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+.blue{
+    background-color: aqua;
+}
+.green{
+    background-color: rgb(5, 255, 5);
+}
+.pink{
+    background-color: palevioletred;
+}
+.yellow{
+    background-color: yellow;
+}
+.high{
+    background-color: rgb(118, 209, 96);
+    margin: auto;
+    border: 2px solid black;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
