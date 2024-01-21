@@ -20,3 +20,19 @@ canvas {
   box-shadow: 0px 5px 18px 10px rgb(128,115,82);
   padding: 15px;
 }
+.extra{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.restart-button{
+  background-color: black;
+  color: rgb(252, 186, 3);
+  padding: 5px 10px;
+  font-size: 26px;
+}
+.scoresheet{
+  color: black;
+  font-size: 26px;
+}

@@ -1,4 +1,3 @@
-
 let board = [
   ['', '', ''],
   ['', '', ''],
@@ -12,6 +11,12 @@ let ai = 'X';
 let human = 'O';
 let currentPlayer = human;
 
+let scoresheet={
+  won: 0,
+  lost: 0,
+  ties: 0
+}
+
 function setup() {
   createCanvas(400, 400);
   w = width / 3;
@@ -23,7 +28,6 @@ function setup() {
 function equals3(a, b, c) {
   return a == b && b == c && a != '';
 }
-
 
 function checkWinner() {
   let winner = null;
@@ -121,11 +125,30 @@ function draw() {
     //end of styles
     if (result == 'tie') {
       resultP.html('Tie!');
+      scoresheet.ties++;      
     } else {
       resultP.html(`${result} Wins!`);
+      if (result === 'X'){
+        scoresheet.lost++;
+      }else{
+        scoresheet.won++;  
+      }
     }
+    document.querySelector('.scoresheet').innerHTML = `win:${scoresheet.won} loss:${scoresheet.lost} tie:${scoresheet.ties}`;
   }
+  let score_string = JSON.stringify(scoresheet);
+  localStorage.setItem('scoresheet',score_string);
 }
+
+restartBtn = document.querySelector('.restart-button');
+restartBtn.onclick = () =>{
+  let score_element = document.querySelector('.scoresheet').innerHTML;
+  localStorage.setItem('score_element',score_element);
+  window.location.reload();
+}
+scoresheet = JSON.parse(localStorage.getItem('scoresheet'));
+document.querySelector('.scoresheet').innerHTML = `win:${scoresheet.won} loss:${scoresheet.lost} tie:${scoresheet.ties}`;
+document.querySelector('.scoresheet').innerHTML = localStorage.getItem('score_element');
 
 
 /* function how the game would look like without AI :
