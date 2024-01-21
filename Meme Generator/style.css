@@ -1,0 +1,25 @@
+.btn{
+    margin: 5px;
+    padding: 2px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #dcdcdc;
+    width: 200px;
+    height: 50px;
+    font-size: x-large;
+    font-weight: bolder;
+
+}
+body{
+    background-image: url('bg.jpg');
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+}
+#display{
+    padding: 2px;
+    margin: 2px;
+}
+div{
+    display: inline;
+}
