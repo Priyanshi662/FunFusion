@@ -86,7 +86,7 @@ let q = "jalpaiguri";
 async function Weather(q) {
     try {
         let res = await axios(url + q);
-        let data = res;
+        let data = res.data.current;
         console.log(data);
         place.innerText = q;
         temp.innerHTML = `${data.feelslike_c}&deg;C`;
