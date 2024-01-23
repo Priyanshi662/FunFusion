@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5 Canvas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <ul>
+        <li>
+          <h3 class="heading">MY CANVAS</h3>
+        </li>
+        <li>
+          <label class="coloricon" for="color">color</label>
+          <input type="color" id="color" />
+        </li>
+        <li class="tool">
+          <button class="btn" id="pen">
+            <span class="btn-text">Pen</span>
+            <i class="fas fa-pen"></i>
+          </button>
+        </li>
+        <li>
+          <label class="pensize" for="slider">
+            Brush Size
+            <!-- <i class="fa-solid fa-paintbrush"></i> -->
+          </label>
+        </li>
+        <li>
+          <input
+            id="slider"
+            type="range"
+            id="vol"
+            name="vol"
+            min="10"
+            max="100"
+            value="10"
+            step="10"
+          />
+        </li>
+
+        <button class="btn" id="eraser">
+          <span class="btn-text"> Eraser</span>
+          <i class="fas fa-eraser"></i>
+        </button>
+      </ul>
+    </div>
+    <!-- <button></button> -->
+    <canvas id="draw" width="300" height="300"></canvas>
+    <script>
+      const canvas = document.querySelector("#draw");
+      const ctx = canvas.getContext("2d");
+      var mode = "pen";
+      let hue = 200;
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      ctx.strokeStyle = "#BADA55";
+      ctx.lineJoin = "round";
+      ctx.lineCap = "round";
+      ctx.lineWidth = 20;
+      // ctx.globalCompositeOperation = 'multiply';
+
+      let isDrawing = false;
+      let lastX = 0;
+      let lastY = 0;
+      var icon = "pen";
+      // let hue=100;
+      //effect variables:
+      /*let hue = 0;
+let direction = true;
+*/
+
+      function draw(e) {
+        if (!isDrawing) return; // stop the fn from running when they are not moused down
+        // console.log(e);
+
+        hue = color.value;
+        ctx.strokeStyle = hue;
+        //hsl(${hue}`${hue}, 100%, 50%)`;
+        ctx.beginPath();
+        if (mode == "pen") {
+          // start from
+          ctx.moveTo(lastX, lastY);
+          // go to
+          ctx.lineTo(e.offsetX, e.offsetY);
+          ctx.stroke();
+        } else if (mode == "eraser") {
+          ctx.globalCompositeOperation = "destination-out";
+          ctx.arc(lastX, lastY, ctx.lineWidth, 0, Math.PI * 2, false);
+          ctx.fill();
+          ctx.globalCompositeOperation = "source-over";
+        }
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+
+        //To create an effect:::>
+        /*hue++;
+  if (hue >= 360) {
+    hue = 0;
+  }
+  if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+    direction = !direction;
+  }
+
+  if(direction) {
+    ctx.lineWidth++;
+  } else {
+    ctx.lineWidth--;
+  }
+  */
+      }
+      var cursor = document.getElementById("draw");
+
+      var p = document.getElementById("pen");
+      p.addEventListener("click", function () {
+        mode = "pen";
+        cursor.classList.remove("eraser");
+      });
+
+      var r = document.getElementById("eraser");
+      r.addEventListener("click", function () {
+        mode = "eraser";
+        icon = "eraser";
+        cursor.classList.add("eraser");
+        console.log(icon);
+      });
+      document
+        .getElementById("slider")
+        .addEventListener("change", (e) => (ctx.lineWidth = slider.value));
+      canvas.addEventListener("mousedown", (e) => {
+        isDrawing = true;
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+      });
+
+      canvas.addEventListener("mousemove", draw);
+      canvas.addEventListener("mouseup", () => (isDrawing = false));
+      canvas.addEventListener("mouseout", () => (isDrawing = false));
+    </script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+      }
+      li {
+        margin-bottom: 40px;
+      }
+
+      li:last-child {
+        margin-bottom: 0px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        border-spacing: 4px;
+        margin: 0;
+      }
+
+      .sidebar {
+        background-color: #333;
+        box-shadow: 0px 0px 10px rgba(30, 30, 30, 0.7);
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        padding: 5px;
+        z-index: 1000;
+      }
+      .heading {
+        color: rgba(255, 71, 141, 0.988);
+        font-size: 23px;
+      }
+      .pensize {
+        background-color: pink;
+        border-radius: 4px;
+        border: none;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+      }
+      .coloricon {
+        background-color: pink;
+        border-radius: 4px;
+        padding: 10px;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+      }
+      .btn {
+        border-radius: 4px;
+        font-size: 15px;
+        padding: 10px;
+        width: 60px;
+        background-color: pink;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+      }
+      .eraser {
+        cursor: url("eraser.png"), default;
+      }
+      .tool {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      /* .tool-btn {
+        margin-right: 1px;
+      } */
+
+      .btn-text {
+        margin-left: 5px;
+      }
+    </style>
+  </body>
+</html>
