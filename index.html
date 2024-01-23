@@ -9,10 +9,19 @@
 </head>
 
 <body>
+
     <div class="Header">
         <h1>Fun Fusion</h1>
         <div id="toggelBtn" onclick="openSidebar()">&#9776;</div>
     </div>
+
+    <div class="SearchBar-Box">
+    <!-- search bar to find the games on the web page -->
+    <input type="text" id="searchInput" placeholder="Search for a game..." oninput="searchGames()">
+    <button onclick="searchGames()" class="search-btn-container">
+        <img src="./Assets/images/search.png" class="search-btn"  alt="Search">
+    </button>
+</div>
 
     <div class="Sidebar" id="sidebar">
         <div class="CloseButton" onclick="closeSidebar()">&times;</div>
@@ -311,7 +320,27 @@
         function closeSidebar() {
             document.getElementById("sidebar").style.right = "-300px";
         }
-    </script>
+
+
+        // JavaScript to handle search functionality
+
+        function searchGames() {
+            var input, filter, cards, card, title, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            cards = document.querySelectorAll(".card");
+
+            cards.forEach(function (card) {
+                title = card.getElementsByTagName("h2")[0];
+                txtValue = title.textContent || title.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+   </script>
 </body>
 
 </html>
