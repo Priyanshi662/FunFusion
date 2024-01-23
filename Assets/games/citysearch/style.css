@@ -1,20 +1,47 @@
-html {
-  box-sizing: border-box;
-  background: #ffc600;
-  font-family: 'helvetica neue';
-  font-size: 20px;
-  font-weight: 200;
+body.dark-theme {
+  background: #121212; /* Dark background */
+  color: #fff; /* Light text */
 }
+
+input.search, .suggestions li {
+  background: #1e1e1e; /* Darker elements */
+  color: #fff; /* Light text */
+}
+
+/* Dropdown Button Improvements */
+.suggestions li {
+  color: black;
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.suggestions li:hover {
+  background: #333333; /* Dark hover effect */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Responsive Design Tweaks */
+@media (max-width: 600px) {
+  /* Adjust styles for mobile devices */
+}
+
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+/* Enhanced Input Field with Glow Effect */
 input {
   width: 100%;
   padding: 20px;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
+input:focus {
+  box-shadow: 0 0 10px rgba(255, 198, 0, 0.8);
+}
+
+/* Enhanced Search Form */
 .search-form {
   max-width: 400px;
   margin: 50px auto;
@@ -35,11 +62,11 @@ input.search {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
 }
 
+/* Enhanced Suggestions List */
 .suggestions {
   margin: 0;
   padding: 0;
   position: relative;
-  /*perspective: 20px;*/
 }
 
 .suggestions li {
@@ -49,10 +76,28 @@ input.search {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
   margin: 0;
   padding: 20px;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.3s ease-in-out;
   display: flex;
   justify-content: space-between;
   text-transform: capitalize;
+}
+
+/* Hover Animation for List Items */
+.suggestions li:hover {
+  transform: scale(1.03);
+  background: #f8f8f8;
+}
+
+input.search, .suggestions li {
+  background: #1e1e1e; /* Darker elements */
+  color: #fff; /* Light text */
+}
+
+/* Dropdown Button Improvements */
+.suggestions li {
+  color: black;
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
 }
 
 .suggestions li:nth-child(even) {
@@ -72,3 +117,19 @@ span.population {
 .hl {
   background: #ffc600;
 }
+
+/* Responsive Design Tweaks */
+@media (max-width: 600px) {
+  input.search {
+    width: 100%;
+    left: 0;
+    top: 5px;
+    font-size: 30px;
+  }
+
+  .search-form {
+    margin: 20px auto;
+  }
+}
+
+
