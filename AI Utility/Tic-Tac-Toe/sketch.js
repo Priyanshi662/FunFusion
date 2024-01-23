@@ -125,13 +125,13 @@ function draw() {
     //end of styles
     if (result == 'tie') {
       resultP.html('Tie!');
-      scoresheet.ties++ ;      
+      scoresheet.ties++;      
     } else {
       resultP.html(`${result} Wins!`);
       if (result === 'X'){
-        scoresheet.lost++ ;
+        scoresheet.lost++;
       }else{
-        scoresheet.won++ ;  
+        scoresheet.won++;  
       }
     }
     document.querySelector('.scoresheet').innerHTML = `win:${scoresheet.won} loss:${scoresheet.lost} tie:${scoresheet.ties}`;
