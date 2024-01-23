@@ -1,0 +1,32 @@
+.btn{
+    margin: 5px;
+    margin-top: 5vh;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #dcdcdc;
+    width: auto;
+    height: 50px;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+body{
+    background-image: url('bg.avif');
+    align-items: center;
+    display:flex;
+    background-size: cover;
+    flex-direction: column;
+}
+#display{
+    padding: 5vw;
+    margin: 10px;
+    width: 50vw;
+    height: auto;
+    background-color: #dcdcdc;
+    border-radius: 5%;
+    font-size: xx-large;
+}
+
+div{
+    display: inline;
+}

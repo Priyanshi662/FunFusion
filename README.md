@@ -11,62 +11,64 @@ The project contains mini utility programs which explore javascript,html and css
 JavaScript, HTML and CSS are the first step in a web developer's journey.
 HTML is the 'what' of the web page, CSS is the style, and JavaScript is the 'how'.
 
-## Tech Stack
+## Table of Contents
 
-1. HTML : The basic structure of the web page.
-2. CSS : The styling effects for making the web page attractive.
-3. Javascript  : Ensures a smooth user experience by working the utility of the page.
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Projects](#projects)
+4. [Project Structure](#project-structure)
+5. [Getting Started](#getting-started)
+6. [Steps to open a pull request](#steps-to-open-a-pull-request)
+7. [Contributing](#contributing)
 
-## Utilities 
+## Introduction
 
-1. AI-Integrated Tic Tac Toe
-   - Engage in a tic tac toe against the computer
-   - Minimax algorithm used to decide computer moves ensures an entertaining gameplay.
+Fun Fusion is a compilation of web applications developed for entertainment purposes. The projects include various games and creative tools, each offering a unique interactive experience.
 
-2. Canvas
-   - Offers a simple yet interactive drawing experience.
-   - The draw function triggered by mouse movement, and implemented by capturing coordinates, makes for an user-friendly interface.
-   - A range of brushes, colors and tools are provided to meet your creative needs.
-     
-3. Analog Clock - Time in Style !
-   - Styled to provide an aesthetically pleasing user experience.
-   - Choose your time zone and get info accurate to the second.
-     
-4. Drum kit
-   - Experiment with a variety of sounds.
-   - Type in the key corresponding to the sound you want.
-     
-5. Text to Speech
-   - Convert text to speech with a single button.
-   - Options like pause, play and stop are provided for user convenience.
-     
-6. Whack A Mole game
-   - Engage in an amusing gameplay.
-   - Dynamic updation of scores.
-   - JavaScript events are used to enhance the interactivity.
-     
-7. Pokemon Generator Chrome Extension
-    - Clean UI
-    - Wide range of pokemon
-      
-8. CitySearch
-   - Type in a city to get its population.
-   - Dynamically filtered suggestions based on user input.
+## Features
 
-## How to run the project
+- **Responsive Design:** The applications are designed to work seamlessly on various devices and screen sizes.
+- **Interactive Cards:** Explore different projects through visually appealing cards, each featuring an image, title, and a button to navigate to the corresponding application.
+- **Sidebar Navigation:** Easily navigate through the projects using the sidebar menu.
+## Projects
 
-The steps to run this project are:
+- **Drawing Board:** Express your creativity with a digital drawing board. 
+- **Analog Clock:** A functional analog clock to keep track of time. 
+- **Tic-Tac-Toe:** Classic Tic-Tac-Toe game with AI opponent. 
+- **City Search:** Search for cities and explore information.
+- **Drum Kit:** Play virtual drums with this interactive drum kit.
+- **Pokemon Generator:** Generate Pokemon and explore their details. 
+- **Text-to-Speech:** Convert text to speech with this utility. 
+- **Whack-A-Mole:** Whack those pesky moles in this classic game. 
+- **Typing Speed Test:** Test and improve your typing speed. 
+- **Memory Card Game:** Classic memory card matching game.
+- AND MANY MORE INTERACTIVE GAMES...!
+
+ ## Project Structure
+
+The project is structured as follows:
+
+- **index.html:** The main HTML file containing the structure of the web page.
+- **CSS Styles:** The project includes internal CSS styles to define the layout and appearance.
+- **JavaScript:** A small script to handle sidebar functionality and improve user experience.
+ 
+## Getting Started   
 1. Fork the repository 
-2. Use git clone "your forked repo URL here" on git command line 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/fun-fusion.git
 3. Use git remote add upstream "your forked repo URL here" on git command line to add remote for the cloned repository.
-4. You can add a new branch to forked repository using git checkout -b "Branch name here"
+4. You can add a new branch to forked repository using git checkout -b "Branch name here".
 5. All Done!! Edit the forked repository and if you think the project can be changed in an incredible feel free to open a pull request :)
 
 ## Steps to open a pull request 
 
 To open a pull request to the main repo the steps are :
-1. Make changes in forked repo and after you're done, commit the changes to git using git commit
-   You can also write a message describing the changes using git commit -m "your message here"
+1. Make changes in forked repo and after you're done, commit the changes to git using git commit.
+   You can also write a message describing the changes using git commit -m "your message here".
 2. Address the issue in issue section. The project maintainer will use this issue to check if it is needed or not, After which you get assigned to it.
-3. Now push the changes to the forked repository main branch using git push origin "Branch name here"
+3. Now push the changes to the forked repository main branch using git push origin "Branch name here".
 4. Compare and pull using GitHub in the main repository.
+
+## Contributing
+Contributions are welcome! If you have ideas for new projects or improvements, feel free to submit a pull request.
