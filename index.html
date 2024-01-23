@@ -5,24 +5,34 @@
     <meta charset="UTF-8" />
     <title>Fun Fusion</title>
     <link rel="stylesheet" href="./Assets/css/style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/Assets/css/style.css">
 </head>
 
 <body>
 
-    <div class="Header">
-        <h1>Fun Fusion</h1>
-        <div id="toggelBtn" onclick="openSidebar()">&#9776;</div>
+    <div class="header">
+        <div class="heading">
+            <div class="outer-circle">
+              <div class="inner-circle">
+              </div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        <div class="search">
+            <div class="SearchBarBox">
+                <!-- search bar to find the games on the web page -->
+                <input type="text" id="searchInput" placeholder="Search for a game..." oninput="searchGames()">
+                <button onclick="searchGames()" class="searchbtn">
+                    <img src="search.png"  alt="Search">
+                </button>
+            </div>
+            <div id="toggelBtn" onclick="openSidebar()">&#9776;</div>
+        </div>
     </div>
-
-    <div class="SearchBar-Box">
-    <!-- search bar to find the games on the web page -->
-    <input type="text" id="searchInput" placeholder="Search for a game..." oninput="searchGames()">
-    <button onclick="searchGames()" class="search-btn-container">
-        <img src="./Assets/images/search.png" class="search-btn"  alt="Search">
-    </button>
-</div>
-
     <div class="Sidebar" id="sidebar">
         <div class="CloseButton" onclick="closeSidebar()">&times;</div>
         <!-- Sidebar content goes here -->
@@ -30,296 +40,327 @@
     </div>
 
     <!-- Card for navigation -->
-    <div class="card">
-        <img src="./Assets/games/Canvas/drawing-pad.png" />
-        <h2>Drawing Board</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Canvas/Mycanvas.html'">Go!</button><br />
-    </div>
+    <div class="games">
+        <div class="card">
+            <img src="./Assets/games/Canvas/drawing-pad.png" />
+            <h2>Drawing Board</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Canvas/Mycanvas.html'">Go!</button><br />
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/Analog Clock/clock.png" />
-        <h2>Analog Clock</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Analog Clock/my clock.html'">
-            Go!</button><br />
-    </div>
+        <div class="card">
+            <img src="./Assets/games/Analog Clock/clock.png" />
+            <h2>Analog Clock</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Analog Clock/my clock.html'">
+                Go!</button><br />
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/Minesweeper/minesweeper.png" />
-        <h2>Minesweeper</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Minesweeper/index.html'">
-            Go!</button><br />
-    </div>
+        <div class="card">
+            <img src="./Assets/games/Minesweeper/minesweeper.png" />
+            <h2>Minesweeper</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Minesweeper/index.html'">
+                Go!</button><br />
+        </div>
 
-    <div class="card">
-        <img src="./Assets/games/AI Utility/tictactoe.png" />
-        <h2>Tic-Tac-Toe</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/AI Utility/Tic-Tac-Toe/index.html'">
-            Go!</button><br />
-    </div>
-
-
-    <div class="card">
-        <img src="./Assets/games/citysearch/citysearch.png" />
-        <h2>City Search</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/citysearch/searchcities.html'">
-            Go!</button><br />
-    </div>
+        <div class="card">
+            <img src="./Assets/games/AI Utility/tictactoe.png" />
+            <h2>Tic-Tac-Toe</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/AI Utility/Tic-Tac-Toe/index.html'">
+                Go!</button><br />
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/Drum kit/drums.png" />
-        <h2>Drum Kit</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Drum Kit/Drum set.html'">
-            Go!</button><br />
-    </div>
+        <div class="card">
+            <img src="./Assets/games/citysearch/citysearch.png" />
+            <h2>City Search</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/citysearch/searchcities.html'">
+                Go!</button><br />
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/Pokemon generator/pokemon.png" />
-        <h2>Pokemon generator</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Pokemon generator/window.html'">
-            Go!</button><br />
-    </div>
+        <div class="card">
+            <img src="./Assets/games/Drum kit/drums.png" />
+            <h2>Drum Kit</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Drum Kit/Drum set.html'">
+                Go!</button><br />
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/text to speech/texttospeech.png" />
-        <h2>text - to - speech</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/text to speech/text-to-speech.html'">
-            Go!</button><br />
-    </div>
+        <div class="card">
+            <img src="./Assets/games/Pokemon generator/pokemon.png" />
+            <h2>Pokemon generator</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Pokemon generator/window.html'">
+                Go!</button><br />
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/Whack A Mole/whackmole.png" />
-        <h2>Whack A mole</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Whack A Mole/index.html'">
-            Go!</button><br />
-    </div>
+        <div class="card">
+            <img src="./Assets/games/text to speech/texttospeech.png" />
+            <h2>text - to - speech</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/text to speech/text-to-speech.html'">
+                Go!</button><br />
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/Typing Speed Test/TypingSpeedTest.jpg" />
-        <h2>Typing Speed Test</h2>
-        <!-- Button to navigate to index.html -->
-        <button onclick="window.location.href='./Assets/games/Typing Speed Test/index.html'">
-            Go!</button><br />
-    </div>
+        <div class="card">
+            <img src="./Assets/games/Whack A Mole/whackmole.png" />
+            <h2>Whack A mole</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Whack A Mole/index.html'">
+                Go!</button><br />
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/Memory Game/images/img.png" />
-        <h2>Memory Card Game</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Memory Game/index.html'">
-            Go!</button><br />
-    </div>
+        <div class="card">
+            <img src="./Assets/games/Typing Speed Test/TypingSpeedTest.jpg" />
+            <h2>Typing Speed Test</h2>
+            <!-- Button to navigate to index.html -->
+            <button onclick="window.location.href='./Assets/games/Typing Speed Test/index.html'">
+                Go!</button><br />
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/Suduko/Sudoku_game_01_en_prev.webp" />
-        <h2>Suduko Solve</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Suduko/index.html'">Go!</button><br />
-    </div>
+        <div class="card">
+            <img src="./Assets/games/Memory Game/images/img.png" />
+            <h2>Memory Card Game</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Memory Game/index.html'">
+                Go!</button><br />
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/Quiz/quiz.avif">
-        <h2>Quiz</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Quiz/index.html'">Go!</button><br>
-    </div>
+        <div class="card">
+            <img src="./Assets/games/Suduko/Sudoku_game_01_en_prev.webp" />
+            <h2>Suduko Solve</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Suduko/index.html'">Go!</button><br />
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/Hangman/images/hang.png">
-        <h2>Hangman</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Hangman/index.html'">Go!</button><br>
-    </div>
-    <div class="card">
-        <img src="Snake Game/snakegame.jpg" />
-        <h2>Snake Game</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='Snake Game/snakegame.html'">
-            Go!</button><br />
-    </div>
-
-    <div class="card">
-        <img src="./Assets/games/Connect4/connect4.png" />
-        <h2>Connect4</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Connect4/index.html'">
-            Go!</button><br />
-    </div>
-    <div class="card">
-        <img src="./Assets/games/Character Guessing Game/Assate/1clhdj8r.png">
-        <h2>Guess The Character</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/Character Guessing Game/index.html'">Go!</button><br>
-    </div>
+        <div class="card">
+            <img src="./Assets/games/Quiz/quiz.avif">
+            <h2>Quiz</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Quiz/index.html'">Go!</button><br>
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/SuperHero/images/Cover.jpg">
-        <h2>SuperHero powerStats</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/SuperHero/index.html'">Go!</button><br>
-    </div>
+        <div class="card">
+            <img src="./Assets/games/Hangman/images/hang.png">
+            <h2>Hangman</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Hangman/index.html'">Go!</button><br>
+        </div>
+        <div class="card">
+            <img src="Snake Game/snakegame.jpg" />
+            <h2>Snake Game</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='Snake Game/snakegame.html'">
+                Go!</button><br />
+        </div>
+
+        <div class="card">
+            <img src="./Assets/games/Connect4/connect4.png" />
+            <h2>Connect4</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Connect4/index.html'">
+                Go!</button><br />
+        </div>
+        <div class="card">
+            <img src="./Assets/games/Character Guessing Game/Assate/1clhdj8r.png">
+            <h2>Guess The Character</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/Character Guessing Game/index.html'">Go!</button><br>
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/Archery/logo.jpg">
-        <h2>Archery</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Archery/index.html'">Go!</button><br>
-    </div>
+        <div class="card">
+            <img src="./Assets/games/SuperHero/images/Cover.jpg">
+            <h2>SuperHero powerStats</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/SuperHero/index.html'">Go!</button><br>
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/Stone-Paper-Scissor Game/images/Stone-paper-scisssor.png">
-        <h2>Stone-Paper-Scissor</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Stone-Paper-Scissor Game/index.html'">Go!</button><br>
-    </div>
+        <div class="card">
+            <img src="./Assets/games/Archery/logo.jpg">
+            <h2>Archery</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Archery/index.html'">Go!</button><br>
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games/piano/tunes/img.png">
-        <h2>Playable Piano</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/piano/index.html'">Go!</button><br>
-    </div>
-
-    <div class="card">
-        <img src="./QR Code Generator/Display-img.png">
-        <h2>QR Code Generator</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='QR Code Generator/index.html'">Go!</button><br>
-    </div>
-
-    <div class="card">
-        <img src="./Weather Forecast/Asset/Preview.jpg">
-        <h2>Advance Weather Forecast</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='Weather Forecast/index.html'">Go!</button><br>
-    </div>
-
-    <div class="card">
-        <img src="./Simon Game/m0pi9hn9.png">
-        <h2>Simon Game</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='Simon Game/index.html'">Go!</button><br>
-    </div>
-
-    <div class="card">
-        <img src="./Assets/games//QR Code Generator/Display-img.png">
-        <h2>QR Code Generator</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/QR Code Generator/index.html'">Go!</button><br>
-    </div>
+        <div class="card">
+            <img src="./Assets/games/Stone-Paper-Scissor Game/images/Stone-paper-scisssor.png">
+            <h2>Stone-Paper-Scissor</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Stone-Paper-Scissor Game/index.html'">Go!</button><br>
+        </div>
 
 
-     
-    <div class="card">
-        <img src="./Assets/games//fun food slicer game/images/slice.png">
-        <h2>Fun Food Slicer</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/fun food slicer game/index.html'">Go!</button><br>
-    </div>
+        <div class="card">
+            <img src="./Assets/games/piano/tunes/img.png">
+            <h2>Playable Piano</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/piano/index.html'">Go!</button><br>
+        </div>
+
+        <div class="card">
+            <img src="./QR Code Generator/Display-img.png">
+            <h2>QR Code Generator</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='QR Code Generator/index.html'">Go!</button><br>
+        </div>
+
+        <div class="card">
+            <img src="./Weather Forecast/Asset/Preview.jpg">
+            <h2>Advance Weather Forecast</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='Weather Forecast/index.html'">Go!</button><br>
+        </div>
+
+        <div class="card">
+            <img src="./Simon Game/m0pi9hn9.png">
+            <h2>Simon Game</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='Simon Game/index.html'">Go!</button><br>
+        </div>
+
+        <div class="card">
+            <img src="qr.png">
+            <h2>QR Code Generator</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/QR Code Generator/index.html'">Go!</button><br>
+        </div>
 
 
 
-    <div class="card">
-
-        <img src="./Assets/games/Tower Blocks/Assets/tower_block.jpg">
-        <h2>Tower Blocks</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Tower Blocks/index.html'">Go!</button><br>
-    </div>
-
-
-  <div class="card">
-        <img src="./Assets/games/NumberGuessingGame/logo.jpg">
-        <h2>Guess The Number</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/NumberGuessingGame/index.html'">Go!</button><br>
-    </div>
+        <div class="card">
+            <img src="./Assets/games//fun food slicer game/images/slice.png">
+            <h2>Fun Food Slicer</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/fun food slicer game/index.html'">Go!</button><br>
+        </div>
 
 
-    <div class="card">
-        <img src="./Assets/games//DinoGame/logo.png">
-        <h2>Dino Game</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/DinoGame/index.html'">Go!</button><br>
-    </div>
 
-    <div class="card">
-        <img src="./Assets/games/Password Generator/image.png">
-        <h2>Password Generator</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Password Generator/index.html'">Go!</button><br>
+        <div class="card">
+
+            <img src="./Assets/games/Tower Blocks/Assets/tower_block.jpg">
+            <h2>Tower Blocks</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Tower Blocks/index.html'">Go!</button><br>
+        </div>
+
+
+        <div class="card">
+            <img src="./Assets/games/NumberGuessingGame/logo.jpg">
+            <h2>Guess The Number</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/NumberGuessingGame/index.html'">Go!</button><br>
+        </div>
+
+
+        <div class="card">
+            <img src="./Assets/games//DinoGame/logo.png">
+            <h2>Dino Game</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/DinoGame/index.html'">Go!</button><br>
+        </div>
+
+        <div class="card">
+            <img src="./Assets/games/Password Generator/image.png">
+            <h2>Password Generator</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='./Assets/games/Password Generator/index.html'">Go!</button><br>
+        </div>
+        <div class="card">
+            <img src="./Meme Generator/memes.jpg">
+            <h2>Meme Generator</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='Meme Generator/index.html'">Go!</button><br>
+        </div>
+
+        <div class="card">
+            <img src="./Riddles/riddles.jpg">
+            <h2>Riddles</h2>
+            <!-- Button to navigate to page1.html -->
+            <button onclick="window.location.href='Riddles/index.html'">Go!</button><br>
+        </div>
     </div>
     <footer>
-        <div class="footer-container">
-            <h1>Fun Fusion</h1>
-            <div class="para">
-                <p>Fun Fusion is a hub of web applications dedicated to providing entertainment and interactive
-                    experiences. Explore our collection of games and creative tools designed to bring joy and excitement
-                    to your online adventures.</p>
+        <div class="footers">
+            <div class="summary">
+                <h1>Fun Fusion</h1>
+                <div class="what">
+                    <p>Fun Fusion is a hub of web applications dedicated to providing entertainment and interactive
+                        experiences. Explore our collection of games and creative tools designed to bring joy and
+                        excitement
+                        to your online adventures.</p>
+                </div>
             </div>
-            <div class="contact-info">
+            <div class="">
                 <div class="contact">
                     <h1>Contact Us</h1>
-                    <p>Have questions or suggestions? Feel free to reach out to our team. We'd love to hear from you!</p>
-                    <div class="para2">
-                    Email: info@funfusion.com <br>
-                    Phone: [Your Phone Number]
+                    <p>Have questions or suggestions? Feel free to reach out to our team. We'd love to hear from you!
+                    </p>
+                    <div class="">
+                        Email: info@funfusion.com <br>
+                        Phone: [Your Phone Number]
                     </div>
                 </div>
                 <div class="social">
-                    <a href="#"><i class="bi bi-github"></i></a>
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-github hi"></i></a>
+                    <a href="#"><i class="bi bi-twitter hi"></i></a>
+                    <a href="#"><i class="bi bi-linkedin hi"></i></a>
+                    <a href="#"><i class="bi bi-facebook hi"></i></a>
                 </div>
             </div>
         </div>
-        <hr class="line">
-        <div class="copyright">
-            <p>&copy; 2024 Fun Fusion. All rights reserved.</p><p>Privacy Policy | Terms of Use</p>
+        <div class="copy">
+            <p>&copy; 2024 Fun Fusion. All rights reserved.</p>
+            <p>Privacy Policy | Terms of Use</p>
         </div>
     </footer>
 
 
-    <div class="card">
-      <img src="./Meme Generator/memes.jpg">
-      <h2>Meme Generator</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='Meme Generator/index.html'">Go!</button><br>
-  </div>
-
-  <div class="card">
-    <img src="./Riddles/riddles.jpg">
-    <h2>Riddles</h2>
-    <!-- Button to navigate to page1.html -->
-    <button onclick="window.location.href='Riddles/index.html'">Go!</button><br>
-</div>
-
-
     <script>
+        //javascript for heading typing effect
+        const dynamicText = document.querySelector(".inner-circle");
+        const words = ["FUN FUSION"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        const typeEffect = () => {
+            const currentWord = words[wordIndex];
+            const currentChar = currentWord.substring(0, charIndex);
+            dynamicText.textContent = currentChar;
+            dynamicText.classList.add("stop-blinking");
+
+            if (!isDeleting && charIndex < currentWord.length) {
+                charIndex++;
+                setTimeout(typeEffect, 200);
+            } else if (isDeleting && charIndex > 0) {
+                charIndex--;
+                setTimeout(typeEffect, 100);
+            } else {
+                isDeleting = !isDeleting;
+                dynamicText.classList.remove("stop-blinking");
+                wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+                setTimeout(typeEffect, 1200);
+            }
+        }
+        typeEffect();
         // JavaScript to handle sidebar functionality
         function openSidebar() {
             document.getElementById("sidebar").style.right = "0";
@@ -348,7 +389,7 @@
                 }
             });
         }
-   </script>
+    </script>
 </body>
 
 </html>
