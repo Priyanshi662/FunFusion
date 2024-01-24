@@ -30,3 +30,11 @@ spn.onclick = () => {
     }
 }
 let riddleurl = "https://riddles-api.vercel.app/random";
+const button = document.querySelector(".button");
+      button.addEventListener("click", (e) => {
+        e.preventDefault;
+        button.classList.add("animate");
+        setTimeout(() => {
+          button.classList.remove("animate");
+        }, 600);
+      });

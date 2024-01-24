@@ -12,3 +12,11 @@ btn[0].onclick = async() => {
 
 
 let meme ="https://meme-api.com/gimme";
+const button = document.querySelector(".button");
+      button.addEventListener("click", (e) => {
+        e.preventDefault;
+        button.classList.add("animate");
+        setTimeout(() => {
+          button.classList.remove("animate");
+        }, 600);
+      });
