@@ -16,6 +16,7 @@ let index = 0,
   flight,
   flyHeight,
   currentScore,
+  lastScore = 0,
   pipe;
 
 // pipe settings
@@ -122,6 +123,7 @@ const render = () => {
         ].every((elem) => elem)
       ) {
         gamePlaying = false;
+        lastScore = currentScore;
         setup();
       }
     });
@@ -152,6 +154,7 @@ const render = () => {
     flyHeight = canvas.height / 2 - size[1] / 2;
     // text accueil
     ctx.fillText(`Best score : ${bestScore}`, 85, 245);
+    ctx.fillText(`Last score : ${lastScore}`, 85, 200);
     ctx.fillText("Click to play", 90, 535);
     ctx.font = "bold 30px courier";
   }
