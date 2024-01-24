@@ -5,13 +5,23 @@
     <meta charset="UTF-8" />
     <title>Fun Fusion</title>
     <link rel="stylesheet" href="./Assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 
 <body>
+
     <div class="Header">
         <h1>Fun Fusion</h1>
         <div id="toggelBtn" onclick="openSidebar()">&#9776;</div>
     </div>
+
+    <div class="SearchBar-Box">
+    <!-- search bar to find the games on the web page -->
+    <input type="text" id="searchInput" placeholder="Search for a game..." oninput="searchGames()">
+    <button onclick="searchGames()" class="search-btn-container">
+        <img src="./Assets/images/search.png" class="search-btn"  alt="Search">
+    </button>
+</div>
 
     <div class="Sidebar" id="sidebar">
         <div class="CloseButton" onclick="closeSidebar()">&times;</div>
@@ -36,6 +46,14 @@
             Go!</button><br />
     </div>
 
+
+    <div class="card">
+        <img src="./Assets/games/Minesweeper/minesweeper.png" />
+        <h2>Minesweeper</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='./Assets/games/Minesweeper/index.html'">
+            Go!</button><br />
+    </div>
 
     <div class="card">
         <img src="./Assets/games/AI Utility/tictactoe.png" />
@@ -132,12 +150,11 @@
         <button onclick="window.location.href='./Assets/games/Hangman/index.html'">Go!</button><br>
     </div>
     <div class="card">
-      <img src="Snake Game/snakegame.jpg" />
-      <h2>Snake Game</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='Snake Game/snakegame.html'">
-        Go!</button
-      ><br />
+        <img src="Snake Game/snakegame.jpg" />
+        <h2>Snake Game</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='Snake Game/snakegame.html'">
+            Go!</button><br />
     </div>
 
     <div class="card">
@@ -145,9 +162,8 @@
         <h2>Connect4</h2>
         <!-- Button to navigate to page1.html -->
         <button onclick="window.location.href='./Assets/games/Connect4/index.html'">
-          Go!</button
-        ><br />
-      </div>
+            Go!</button><br />
+    </div>
     <div class="card">
         <img src="./Assets/games/Character Guessing Game/Assate/1clhdj8r.png">
         <h2>Guess The Character</h2>
@@ -187,27 +203,27 @@
         <button onclick="window.location.href='./Assets/games/piano/index.html'">Go!</button><br>
     </div>
 
-  <div class="card">
-    <img src="./QR Code Generator/Display-img.png">
-    <h2>QR Code Generator</h2>
-    <!-- Button to navigate to page1.html -->
-    <button onclick="window.location.href='QR Code Generator/index.html'">Go!</button><br>
-  </div>
+    <div class="card">
+        <img src="./QR Code Generator/Display-img.png">
+        <h2>QR Code Generator</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='QR Code Generator/index.html'">Go!</button><br>
+    </div>
 
-  <div class="card">
-    <img src="./Weather Forecast/Asset/Preview.jpg">
-    <h2>Advance Weather Forecast</h2>
-    <!-- Button to navigate to page1.html -->
-    <button onclick="window.location.href='Weather Forecast/index.html'">Go!</button><br>
-  </div>
+    <div class="card">
+        <img src="./Weather Forecast/Asset/Preview.jpg">
+        <h2>Advance Weather Forecast</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='Weather Forecast/index.html'">Go!</button><br>
+    </div>
 
-  <div class="card">
-    <img src="./Simon Game/m0pi9hn9.png">
-    <h2>Simon Game</h2>
-    <!-- Button to navigate to page1.html -->
-    <button onclick="window.location.href='Simon Game/index.html'">Go!</button><br>
-  </div>
-  
+    <div class="card">
+        <img src="./Simon Game/m0pi9hn9.png">
+        <h2>Simon Game</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='Simon Game/index.html'">Go!</button><br>
+    </div>
+
     <div class="card">
         <img src="./Assets/games//QR Code Generator/Display-img.png">
         <h2>QR Code Generator</h2>
@@ -216,6 +232,28 @@
     </div>
 
     <div class="card">
+
+
+        <img src="./Assets/games/guess_the_no/Screenshot 2024-01-22 171515.png">
+        <h2>Guess The Number</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='./Assets/games/guess_the_no/index.html'">Go!</button><br>
+    </div>
+
+
+
+     
+    <div class="card">
+        <img src="./Assets/games//fun food slicer game/images/slice.png">
+        <h2>Fun Food Slicer</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='./Assets/games/fun food slicer game/index.html'">Go!</button><br>
+    </div>
+
+
+
+    <div class="card">
+
 
         <img src="./Assets/games/Tower Blocks/Assets/tower_block.jpg">
         <h2>Tower Blocks</h2>
@@ -251,11 +289,71 @@
 
 
   
+
     <div class="card">
         <img src="./Assets/games/Password Generator/image.png">
         <h2>Password Generator</h2>
         <!-- Button to navigate to page1.html -->
         <button onclick="window.location.href='./Assets/games/Password Generator/index.html'">Go!</button><br>
+    </div>
+    <div class="card">
+        <img src="./Assets/games/Wordle Game/wordle.png">
+        <h2>Wordle Game</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='./Assets/games/Wordle Game/index.html'">Go!</button><br>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <h1>Fun Fusion</h1>
+            <div class="para">
+                <p>Fun Fusion is a hub of web applications dedicated to providing entertainment and interactive
+                    experiences. Explore our collection of games and creative tools designed to bring joy and excitement
+                    to your online adventures.</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact">
+                    <h1>Contact Us</h1>
+                    <p>Have questions or suggestions? Feel free to reach out to our team. We'd love to hear from you!</p>
+                    <div class="para2">
+                    Email: info@funfusion.com <br>
+                    Phone: [Your Phone Number]
+                    </div>
+                </div>
+                <div class="social">
+                    <a href="#"><i class="bi bi-github"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="line">
+        <div class="copyright">
+            <p>&copy; 2024 Fun Fusion. All rights reserved.</p><p>Privacy Policy | Terms of Use</p>
+        </div>
+    </footer>
+
+
+    <div class="card">
+      <img src="./Meme Generator/memes.jpg">
+      <h2>Meme Generator</h2>
+      <!-- Button to navigate to page1.html -->
+      <button onclick="window.location.href='Meme Generator/index.html'">Go!</button><br>
+  </div>
+
+  <div class="card">
+    <img src="./Riddles/riddles.jpg">
+    <h2>Riddles</h2>
+    <!-- Button to navigate to page1.html -->
+    <button onclick="window.location.href='Riddles/index.html'">Go!</button><br>
+</div>
+
+
+     <div class="card">
+        <img src="./Assets/games/Highway-Race/image.jpg">
+        <h2>Highway Racing</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='./Assets/games/Highway-Race/index.html'">Go!</button><br>
      </div>
 
 
@@ -268,7 +366,27 @@
         function closeSidebar() {
             document.getElementById("sidebar").style.right = "-300px";
         }
-    </script>
+
+
+        // JavaScript to handle search functionality
+
+        function searchGames() {
+            var input, filter, cards, card, title, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            cards = document.querySelectorAll(".card");
+
+            cards.forEach(function (card) {
+                title = card.getElementsByTagName("h2")[0];
+                txtValue = title.textContent || title.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+   </script>
 </body>
 
 </html>

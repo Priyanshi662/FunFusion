@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #282c35;
+    color: #fff;
+    overflow: hidden; /* Prevents scroll bars */
+  }
+  
+  #container {
+    display: flex;
+    background-color: #282c35;
+    height: 95vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #game {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    border-bottom: 1px solid #444;
+  }
+  
+  .title {
+    color: #61dafb; /* React blue color */
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.4rem 0;
+    text-align: center;
+  }
+  
+  #board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  #board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+  }
+  
+  .square {
+    border: 2px solid #61dafb;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #61dafb;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    border-radius: 4px;
+  }
+  
+  #keyboard-container {
+    height: 150px;
+  }
+  
+  .keyboard-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 10px;
+  }
+  
+  .keyboard-row button {
+    font-family: inherit;
+    font-weight: bold;
+    border: 0;
+    padding: 0;
+    height: 50px;
+    cursor: pointer;
+    background-color: #61dafb;
+    color: #fff;
+    flex-grow: 1;
+    text-transform: uppercase;
+    margin-right: 5px;
+    border-radius: 4px;
+    user-select: none;
+    transition: background-color 0.3s;
+  }
+  
+  .keyboard-row button.wide-button {
+    flex-grow: 1.5;
+  }
+  
+  .spacer-half {
+    flex-grow: 0.5;
+  }
+  
+  .keyboard-row button:hover {
+    background-color: #4fa3d1; /* Slightly darker on hover */
+  }
+  

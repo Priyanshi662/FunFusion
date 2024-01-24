@@ -114,3 +114,57 @@
       right: -300px; /* Adjusted for better responsiveness */
     }
   }
+
+  footer{
+    background-color:#4caf50;
+    width: 100%;
+    color: rgb(242, 242, 242);
+    border-radius: 10px;
+  }
+  .footer-container{
+    padding: 10px;
+  }
+  .footer-container h1{
+    text-align: center;
+  }
+  .para{
+    text-align: center;
+    font-size: 1.20rem;
+    line-height: 30px;
+    padding: 5px 10px;
+    margin: 0px 30px;
+  }
+  .contact h1{
+    text-align: center;
+  }
+  .contact p{
+    text-align: center;
+    font-size: 1.20rem;
+  }
+  .para2{
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .social a{
+    text-decoration: none;
+    color: #000;
+  }
+
+  .social{
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 2rem;
+    margin: 10px 0px;
+  }
+  .social a:hover{
+    color: azure;
+  }
+  .copyright{
+    text-align: center;
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+  }
+  .line{
+    margin: 0px 50px;
+  }
