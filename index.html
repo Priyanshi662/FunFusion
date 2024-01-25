@@ -2,175 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Fun Fusion</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Dictionary</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="dictionary.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-
   <body>
-    <div class="Header">
-      <h1>Fun Fusion</h1>
-      <div id="toggelBtn" onclick="openSidebar()">&#9776;</div>
-    </div>
+    <div class="wrapper">
+      <header>English Dictionary</header>
+      <div class="search">
+        <input type="text" placeholder="Search a world" required />
+        <i class="fas fa-search"></i>
+        <span class="material-icons">close</span>
+      </div>
+      <p class="info-text">Type the word and press enter</p>
+      <ul>
+        <li class="word">
+          <div class="details">
+            <p>_</p>
+            <span>__</span>
+          </div>
+          <i class="fas fa-volume-up"></i>
+        </li>
 
-    <div class="Sidebar" id="sidebar">
-      <div class="CloseButton" onclick="closeSidebar()">&times;</div>
-      <!-- Sidebar content goes here -->
-      <p>Sidebar Content</p>
-    </div>
-    <!-- Card for navigation -->
-    <div class="card">
-      <img src="Canvas/drawing-pad.png" />
-      <h2>Drawing Board</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='Canvas/Mycanvas.html'">Go!</button
-      ><br />
-    </div>
-    <div class="card">
-      <img src="Analog Clock/clock.png" />
-      <h2>Analog Clock</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='Analog Clock/my clock.html'">
-        Go!</button
-      ><br />
-    </div>
-    <div class="card">
-      <img src="AI Utility/tictactoe.png" />
-      <h2>Tic-Tac-Toe</h2>
-      <!-- Button to navigate to page1.html -->
-      <button
-        onclick="window.location.href='AI Utility/Tic-Tac-Toe/index.html'"
-      >
-        Go!</button
-      ><br />
-    </div>
-    <div class="card">
-      <img src="citysearch/citysearch.png" />
-      <h2>City Search</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='citysearch/searchcities.html'">
-        Go!</button
-      ><br />
-    </div>
-    <div class="card">
-      <img src="Drum kit/drums.png" />
-      <h2>Drum Kit</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='./Drum Kit/Drum set.html'">
-        Go!</button
-      ><br />
-    </div>
-    <div class="card">
-      <img src="Pokemon generator/pokemon.png" />
-      <h2>Pokemon generator</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='Pokemon generator/window.html'">
-        Go!</button
-      ><br />
-    </div>
-    <div class="card">
-      <img src="text to speech/texttospeech.png" />
-      <h2>text - to - speech</h2>
-      <!-- Button to navigate to page1.html -->
-      <button
-        onclick="window.location.href='text to speech/text-to-speech.html'"
-      >
-        Go!</button
-      ><br />
-    </div>
-    <div class="card">
-      <img src="Whack A Mole/whackmole.png" />
-      <h2>Whack A mole</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='Whack A Mole/index.html'">
-        Go!</button
-      ><br />
-    </div>
-    <div class="card">
-      <img src="Typing Speed Test/TypingSpeedTest.jpg" />
-      <h2>Typing Speed Test</h2>
-      <!-- Button to navigate to index.html -->
-      <button onclick="window.location.href='Typing Speed Test/index.html'">
-        Go!</button
-      ><br />
-    </div>
-    <div class="card">
-      <img src="Memory Game/images/img.png" />
-      <h2>Memory Card Game</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='Memory Game/index.html'">
-        Go!</button
-      ><br />
-    </div>
-    <div class="card">
-      <img src="Suduko/Sudoku_game_01_en_prev.webp" />
-      <h2>Suduko Solve</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='Suduko/index.html'">Go!</button
-      ><br />
-    </div>
-    <div class="card">
-        <img src="Quiz/quiz.avif">
-        <h2>Quiz</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='Quiz/index.html'">Go!</button><br>
-    </div>
-    <div class="card">
-        <img src="Hangman/hang.png">
-        <h2>Hangman</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='Hangman/index.html'">Go!</button><br>
-    </div>
+        <div class="content">
+          <li class="meaning">
+            <div class="details">
+              <p>Meaning</p>
+              <span>__</span>
+            </div>
+          </li>
 
-    <div class="card">
-      <img src="./Character Guessing Game/Assate/1clhdj8r.png">
-      <h2>Guess The Character</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='./Character Guessing Game/index.html'">Go!</button><br>
-  </div>
-    <div class="card">
-
-      <img src="./SuperHero/images/Cover.jpg">
-      <h2>SuperHero powerStats</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='./SuperHero/index.html'">Go!</button><br>
-  </div>
-
-      <img src="./Archery/logo.jpg">
-      <h2>Archery</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='./Archery/index.html'">Go!</button><br>
-  </div>
-
-    <div class="card">
-        <img src="./Stone-Paper-Scissor Game/images/Stone-paper-scisssor.png">
-        <h2>Stone-Paper-Scissor</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='Stone-Paper-Scissor Game/index.html'">Go!</button><br>
+          <li class="example">
+            <div class="details">
+              <p>Example</p>
+              <span>__</span>
+            </div>
+          </li>
+          <li class="synonyms">
+            <div class="details">
+              <p>Synonyms</p>
+              <div class="list"></div>
+            </div>
+          </li>
+        </div>
+      </ul>
     </div>
-    <div class="card">
-        <img src="piano/tunes/img.png">
-        <h2>Playable Piano</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='piano/index.html'">Go!</button><br>
-    </div>
-
-
-    <div class="card">
-        <img src="./QR Code Generator/Display-img.png">
-        <h2>QR Code Generator</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='QR Code Generator/index.html'">Go!</button><br>
-    </div>
-
-    <script>
-      // JavaScript to handle sidebar functionality
-      function openSidebar() {
-        document.getElementById("sidebar").style.right = "0";
-      }
-
-      function closeSidebar() {
-        document.getElementById("sidebar").style.right = "-300px";
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
