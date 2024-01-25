@@ -140,6 +140,9 @@ html, body {
 #container.ended .game-over p {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
+
+}
+
 }
 .button {
   position: absolute;
@@ -225,3 +228,4 @@ html, body {
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
+
