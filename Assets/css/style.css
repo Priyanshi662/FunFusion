@@ -1,7 +1,38 @@
+
 * {
   margin: 0;
   padding: 0;
 }
+
+.Header {
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .rate-us-btn {
+    color: #4caf50;
+    background-color:#fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.rate-us-btn:hover {
+    background-color: #03b300;
+    color:#fff;
+}
+
+#toggelBtn {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
 
 body {
   background-image: url("bg2.avif");
@@ -295,4 +326,10 @@ span:nth-child(4) {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
   }
+
 }
+
+  .line{
+    margin: 0px 50px;
+  }
+

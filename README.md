@@ -72,3 +72,12 @@ To open a pull request to the main repo the steps are :
 
 ## Contributing
 Contributions are welcome! If you have ideas for new projects or improvements, feel free to submit a pull request.
+
+## License
+
+This project is licensed under [MIT License](License.md)
+
+## Code Of Conduct
+
+To maintain a safe and inclusive space for everyone to learn and grow, contributors are advised to follow the [Code of Conduct](Code_Of_Conduct.md)
+

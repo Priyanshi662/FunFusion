@@ -5,11 +5,17 @@
     <meta charset="UTF-8" />
     <title>Fun Fusion</title>
     <link rel="stylesheet" href="./Assets/css/style.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/Assets/css/style.css">
+
+    <link rel="icon" type="image/x-icon" href="./images/funfusion-logo.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
 </head>
 
 <body>
+
 
     <div class="header">
         <div class="heading">
@@ -33,6 +39,22 @@
             <div id="toggelBtn" onclick="openSidebar()">&#9776;</div>
         </div>
     </div>
+
+    <div class="Header">
+        <h1>Fun Fusion</h1>
+        <a href="./rate/index.html" class="rate-us-btn">&#9733; Rate Us</a>
+        <div id="toggelBtn" onclick="openSidebar()">&#9776;</div>
+    </div>
+    <a href="contributor.html">Contributors</a>
+
+    <div class="SearchBar-Box">
+    <!-- search bar to find the games on the web page -->
+    <input type="text" id="searchInput" placeholder="Search for a game..." oninput="searchGames()">
+    <button onclick="searchGames()" class="search-btn-container">
+        <img src="./Assets/images/search.png" class="search-btn"  alt="Search">
+    </button>
+</div>
+
     <div class="Sidebar" id="sidebar">
         <div class="CloseButton" onclick="closeSidebar()">&times;</div>
         <!-- Sidebar content goes here -->
@@ -66,6 +88,7 @@
                 Go!</button><br />
         </div>
 
+
         <div class="card">
             <img src="./Assets/games/AI Utility/tictactoe.png" />
             <h2>Tic-Tac-Toe</h2>
@@ -73,6 +96,23 @@
             <button onclick="window.location.href='./Assets/games/AI Utility/Tic-Tac-Toe/index.html'">
                 Go!</button><br />
         </div>
+
+    <div class="card">
+        <img src="./Assets/games/Flappy Bird/assets/fBird.png" style="width: 70%;" />
+        <h2>Flappy Bird</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='./Assets/games/Flappy Bird/index.html'">
+            Go!</button><br />
+    </div>
+
+    <div class="card">
+        <img src="./Assets/games/AI Utility/tictactoe.png" />
+        <h2>Tic-Tac-Toe</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='./Assets/games/AI Utility/Tic-Tac-Toe/index.html'">
+            Go!</button><br />
+    </div>
+
 
 
         <div class="card">
@@ -243,6 +283,8 @@
         </div>
 
     <div class="card">
+
+
         <img src="./Assets/games/guess_the_no/Screenshot 2024-01-22 171515.png">
         <h2>Guess The Number</h2>
         <!-- Button to navigate to page1.html -->
@@ -261,7 +303,16 @@
 
 
 
+
         <div class="card">
+
+
+        <img src="./Assets/games/Tower Blocks/Assets/tower_block.jpg">
+        <h2>Tower Blocks</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='./Assets/games/Tower Blocks/index.html'">Go!</button><br>
+    </div>
+
 
             <img src="./Assets/games/Tower Blocks/Assets/tower_block.jpg">
             <h2>Tower Blocks</h2>
@@ -276,6 +327,7 @@
             <!-- Button to navigate to page1.html -->
             <button onclick="window.location.href='./Assets/games/NumberGuessingGame/index.html'">Go!</button><br>
         </div>
+
 
 
         <div class="card">
@@ -304,13 +356,82 @@
             <!-- Button to navigate to page1.html -->
             <button onclick="window.location.href='Riddles/index.html'">Go!</button><br>
         </div>
+
+    
+    <div class="card">
+        <img src="./Assets/games//Color blast/rain.jpg">
+        <h2>Color Blast</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='./Assets/games/Color blast/index.html'">Go!</button><br>
+    </div>
+
+
+
+  
+
+    <div class="card">
+        <img src="./Assets/games/Password Generator/image.png">
+        <h2>Password Generator</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='./Assets/games/Password Generator/index.html'">Go!</button><br>
+
+    </div>
+    <div class="card">
+      <img src="./Assets/games/Guess the word/display.png">
+        <h2>Guess the word</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='./Assets/games/Guess the word/index.html'">Go!</button><br>
     </div>
     <div class="card">
         <img src="./Assets/games/Wordle Game/wordle.png">
         <h2>Wordle Game</h2>
         <!-- Button to navigate to page1.html -->
         <button onclick="window.location.href='./Assets/games/Wordle Game/index.html'">Go!</button><br>
+
     </div>
+    <div class="card">
+        <img src="./ai/ai.png" />
+        <h2>AI Image Generator</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='ai/index.html' ">
+            Go!</button><br />
+    </div>
+    <div class="card">
+        <img src="./wordscramble/img.png" />
+        <h2>Word Scramble</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='wordscramble/index.html' ">
+            Go!</button><br />
+    </div>
+
+    <div class="card">
+        <img src="./Meme Generator/memes.jpg">
+        <h2>Meme Generator</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='Meme Generator/index.html'">Go!</button><br>
+    </div>
+  
+    <div class="card">
+        <img src="./Assets/games/Block_Buster/banner.png">
+        <h2>Block Buster </h2>
+        <button onclick="window.location.href='./Assets/games/Block_Buster/index.html'">Go!</button><br>
+    </div>
+
+    <div class="card">
+      <img src="./Riddles/riddles.jpg">
+      <h2>Riddles</h2>
+      <!-- Button to navigate to page1.html -->
+      <button onclick="window.location.href='Riddles/index.html'">Go!</button><br>
+  </div>
+  
+  
+       <div class="card">
+          <img src="./Assets/games/Highway-Race/image.jpg">
+          <h2>Highway Racing</h2>
+          <!-- Button to navigate to page1.html -->
+          <button onclick="window.location.href='./Assets/games/Highway-Race/index.html'">Go!</button><br>
+       </div>
+  
     <footer>
         <div class="footers">
             <div class="summary">
@@ -345,7 +466,12 @@
             <p>Privacy Policy | Terms of Use</p>
         </div>
     </footer>
+
     <div class="card">
+
+
+ <div class="card">
+
       <img src="./Meme Generator/memes.jpg">
       <h2>Meme Generator</h2>
       <!-- Button to navigate to page1.html -->
@@ -366,6 +492,7 @@
         <!-- Button to navigate to page1.html -->
         <button onclick="window.location.href='./Assets/games/Highway-Race/index.html'">Go!</button><br>
      </div>
+
     <script>
         //javascript for heading typing effect
         const dynamicText = document.querySelector(".inner-circle");
