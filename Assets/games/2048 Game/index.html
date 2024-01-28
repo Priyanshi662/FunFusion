@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>2048 Game</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+        <body>
+            <div class="heading"><h1> 2048 GAME</h1></div>
+            <div class="score-container">
+                <div > Score: <span id ="current-score">0</span>
+                </div>
+                <div > High Score: <span id ="high-score">0</span>
+                </div>
+            </div>
+
+                 <div class="game-container">
+                    <div class="grid">
+                        <div class="cell" data-row="0" data-col="0"></div>
+                        <div class="cell" data-row="0" data-col="1"></div>
+                        <div class="cell" data-row="0" data-col="2"></div>
+                        <div class="cell" data-row="0" data-col="3"></div>
+                        <div class="cell" data-row="1" data-col="0"></div>
+                        <div class="cell" data-row="1" data-col="1"></div>
+                        <div class="cell" data-row="1" data-col="2"></div>
+                        <div class="cell" data-row="1" data-col="3"></div>
+                        <div class="cell" data-row="2" data-col="0"></div>
+                        <div class="cell" data-row="2" data-col="1"></div>
+                        <div class="cell" data-row="2" data-col="2"></div>
+                        <div class="cell" data-row="2" data-col="3"></div>
+                        <div class="cell" data-row="3" data-col="0"></div>
+                        <div class="cell" data-row="3" data-col="1"></div>
+                        <div class="cell" data-row="3" data-col="2"></div>
+                        <div class="cell" data-row="3" data-col="3"></div>
+                    </div>
+                 </div>
+                 <div id="game-over">
+                    Game Over!
+                    <button id="restart-btn">Restart Game</button>
+                 </div>
+
+                <button class="back-to-home"><a href="/index.html">Back to home</a></button>
+                
+            
+
+
+
+
+            <script src="./script.js"></script>
+        </body>
+        
+    </html>
