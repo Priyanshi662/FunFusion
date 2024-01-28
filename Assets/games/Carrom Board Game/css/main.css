@@ -1,0 +1,46 @@
+body,html{
+	padding: 0px;
+	margin: 0px;
+	
+}
+body{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+div{
+	margin: 0px;
+	padding: 0px;
+}
+#Carrom{
+	background-color: black;
+	position: absolute;
+}
+#Striker{
+	position: relative;
+}
+.jumbotron{
+	padding: 1rem;
+	border-radius: 1rem;
+	margin: 1rem 0;
+	padding: 10px 20px;
+	background: lightblue;
+}
+
+.jumbotron hr{
+	border: 1px solid black;
+}
+
+.range{
+	display: flex;
+	flex-flow: column;
+	background: lightblue;
+	padding: 2rem;
+	border-radius: 1rem;
+	margin: 1rem 0;
+}
+
+.range label{
+	font-size: 1.5rem;
+	font-weight: 700;
+}
