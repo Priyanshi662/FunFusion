@@ -15,6 +15,11 @@
 </head>
 
 <body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <button onclick="smoothScrollToTop()" id="goToTopBtn" class="go-to-top-btn">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
 
     <div class="header">
@@ -484,7 +489,7 @@
         <button onclick="window.location.href='./Assets/bird shooting/index.html'">Go!</button><br>
      </div>
 
-     
+
 
 
   
@@ -641,6 +646,37 @@
                     card.style.display = "none";
                 }
             });
+        }
+        function smoothScrollToTop() {
+            const currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+            if (currentPosition > 0) {
+                window.requestAnimationFrame(smoothScrollToTop);
+                window.scrollTo(0, currentPosition - currentPosition / 8);
+            }
+        }
+
+        // Dynamic display of "Go to Top" button with smooth scrolling animation and progress bar
+        window.onscroll = function () {
+            scrollFunction();
+            updateProgressBar();
+        };
+
+        function scrollFunction() {
+            var goToTopBtn = document.getElementById("goToTopBtn");
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                goToTopBtn.style.display = "block";
+            } else {
+                goToTopBtn.style.display = "none";
+            }
+        }
+
+        function updateProgressBar() {
+            const progressBar = document.getElementById("progressBar");
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            progressBar.style.width = `${progress}%`;
         }
     </script>
 </body>
