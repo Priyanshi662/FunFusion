@@ -4,8 +4,8 @@
 🔴 Technologies used, **HTML, CSS, JS**
 
 # **Screenshots 📸**
+![image](https://github.com/Priyanshi662/FunFusion/assets/125949765/4e633906-df09-4080-a15a-4fee042b89a7)
 
-![](../../assets/images/UNO.png)
 
 <br>
 
