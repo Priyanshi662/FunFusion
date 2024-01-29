@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
 * {
   margin: 0;
@@ -230,60 +231,76 @@ span:nth-child(4) {
   color: #000;
   font-size: 20px;
 }
+
+/* ----------------------------------------------Updated Footer Section -------------------------------------------- */
+
 .copy{
-  background: linear-gradient(to bottom, #eb22bf, #2e1ac7);
+  background: linear-gradient(90deg, hsla(282, 36%, 25%, 1) 0%, hsla(310, 22%, 37%, 1) 100%);
+  backdrop-filter: blur(10px);
   text-align: center;
   padding:1vmin;
   font-size: 3vmin;
-  color: #000;
-  font-weight: bold;
+  color: #f5f5f5;
+  font-weight:400;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid #f5f5f5 ;
 }
-.footers {
-  background: linear-gradient(to bottom,#2e1ac7, #eb22bf);
-  display: flex;
-  justify-content: space-evenly;
-  gap:10%;
-  color: #000;
-  font-weight: bold;
-  border-top: 2px solid white;
+
+.footer{
+  background: linear-gradient(90deg, hsla(282, 36%, 25%, 1) 0%, hsla(310, 22%, 37%, 1) 100%);
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 30px;
+  font-family: 'Poppins', sans-serif;
+  color:#f5f5f5;
 }
+
+.about {
+  margin: 20px;
+  text-align: justify;
+}
+
+.what{
+  font-size: 21px;
+}
+
 .contact {
   text-align: center;
-  margin-right:10%;
+  margin: 20px;
 }
-.what {
-  font-size: 3vmin;
-  width: 60%;
-  text-align: left;
-  
-}
-.summary h1 ,.contact h1
-{
 
-  font-size: 8vmin;
-  color: #000;
+.contact p , .main-contact{
+  font-size: 21px;
 }
+
+.about h1 , .contact h1{
+  font-size: 3rem;
+  text-align: center;
+}
+
 .social{
   margin-top:3vmin;
   display: flex;
   justify-content: center;
   height:6vmin;
+  font-size: 23px;
 }
+
+.socaial a{
+  transition: 0.5s;
+}
+
+.social i:hover, .social a:hover{
+  color:#30c5d2;
+  transform: translateY(-2px);
+}
+
 .hi{
   margin-right:3vmin;
   height:6vmin;
-  color:black;
+  color:#f5f5f5;
 }
 
-.summary
- {
-  margin-left: 2vmin;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 2vmin;
-}
 #searchInput{
   height:7vmin;
   background-color: #b6c9f1;
@@ -294,6 +311,7 @@ span:nth-child(4) {
   font-size:3vmin;
   border:2px solid rgb(182, 199, 243);
 }
+
 @media (max-width: 600px) {
   #toggelBtn {
     display: inline;
