@@ -332,4 +332,8 @@ span:nth-child(4) {
   .line{
     margin: 0px 50px;
   }
-
+a:hover {
+    
+    transform: translateY(-4px);
+    transition:0.3s;
+}
