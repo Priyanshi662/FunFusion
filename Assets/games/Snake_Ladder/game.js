@@ -207,13 +207,13 @@
 
 
         if (tog % 2 != 0) {
-            document.getElementById('tog').innerText = "Yellow's Turn : "
+            document.getElementById('tog').innerText = "Red's Turn : "
             play('p1', 'p1sum', 0, num)
 
         }
 
         else if (tog % 2 == 0) {
-            document.getElementById('tog').innerText = "Red's Turn : "
+            document.getElementById('tog').innerText = "Yellow's Turn : "
 
             play('p2', 'p2sum', 55, num)
 
