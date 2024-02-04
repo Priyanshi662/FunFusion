@@ -204,4 +204,56 @@ form header{
   form .btn button:hover{
     background: #1b1b1b;
   }
+  .above-wrapper-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    opacity: 70%;
+  }
+  
+  .wrapper {
+    position: relative;
+    background: #f6f6f6;
+    max-width: 360px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    z-index: 1;
+  }
+  
+  @media screen and (max-width: 375px) {
+    .above-wrapper-image {
+      width: 90%; /* Adjust this value based on your design */
+      max-width: none;
+    }
+  
+    .wrapper {
+      max-width: 90%; /* Adjust this value based on your design */
+    }
+  }
+  
+  @media screen and (min-width: 376px) and (max-width: 540px) {
+    .above-wrapper-image {
+      width: 80%; /* Adjust this value based on your design */
+      max-width: none;
+    }
+  
+    .wrapper {
+      max-width: 80%; /* Adjust this value based on your design */
+    }
+  }
+  
+  @media screen and (min-width: 541px) and (max-width: 1024px) {
+    .above-wrapper-image {
+      width: 70%; /* Adjust this value based on your design */
+      max-width: none;
+    }
+  
+    .wrapper {
+      max-width: 70%; /* Adjust this value based on your design */
+    }
+  }
   

@@ -11,10 +11,22 @@
 
     <link rel="icon" type="image/x-icon" href="./images/funfusion-logo.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 
 </head>
 
 <body>
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-icon-container">
+            <i class="bx bx-cookie"></i> <!-- Cookie Icon -->
+            <span>Cookies Consent</span> <!-- Text beside the icon -->
+        </div>
+        <p>This website uses cookies to ensure you get the best experience on our website. <a href="#" style="color: #f8f393;">Learn more</a></p>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()">Accept</button>
+            <button onclick="declineCookies()">Decline</button>
+        </div>
+    </div>
 
 
     <div class="header">
@@ -121,15 +133,6 @@
         <button onclick="window.location.href='./Assets/games/Checkers Game/index.html'">
             Go!</button><br />
     </div>
-
-    <div class="card">
-        <img src="./Assets/games/AI Utility/tictactoe.png" />
-        <h2>Tic-Tac-Toe</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/AI Utility/Tic-Tac-Toe/index.html'">
-            Go!</button><br />
-    </div>
-
 
 
         <div class="card">
@@ -294,13 +297,6 @@
         </div>
 
         <div class="card">
-            <img src="./QR Code Generator/Display-img.png">
-            <h2>QR Code Generator</h2>
-            <!-- Button to navigate to page1.html -->
-            <button onclick="window.location.href='QR Code Generator/index.html'">Go!</button><br>
-        </div>
-
-        <div class="card">
             <img src="./Weather Forecast/Asset/Preview.jpg">
             <h2>Advance Weather Forecast</h2>
             <!-- Button to navigate to page1.html -->
@@ -352,23 +348,6 @@
         <button onclick="window.location.href='./Assets/games/Tower Blocks/index.html'">Go!</button><br>
     </div>
 
-
-            <img src="./Assets/games/Tower Blocks/Assets/tower_block.jpg">
-            <h2>Tower Blocks</h2>
-            <!-- Button to navigate to page1.html -->
-            <button onclick="window.location.href='./Assets/games/Tower Blocks/index.html'">Go!</button><br>
-        </div>
-
-
-        <div class="card">
-            <img src="./Assets/games/NumberGuessingGame/logo.jpg">
-            <h2>Guess The Number</h2>
-            <!-- Button to navigate to page1.html -->
-            <button onclick="window.location.href='./Assets/games/NumberGuessingGame/index.html'">Go!</button><br>
-        </div>
-
-
-
         <div class="card">
             <img src="./Assets/games//DinoGame/logo.png">
             <h2>Dino Game</h2>
@@ -382,39 +361,8 @@
             <!-- Button to navigate to page1.html -->
             <button onclick="window.location.href='./Assets/games/Password Generator/index.html'">Go!</button><br>
         </div>
-        <div class="card">
-            <img src="./Meme Generator/memes.jpg">
-            <h2>Meme Generator</h2>
-            <!-- Button to navigate to page1.html -->
-            <button onclick="window.location.href='Meme Generator/index.html'">Go!</button><br>
-        </div>
-
-        <div class="card">
-            <img src="./Riddles/riddles.jpg">
-            <h2>Riddles</h2>
-            <!-- Button to navigate to page1.html -->
-            <button onclick="window.location.href='Riddles/index.html'">Go!</button><br>
-        </div>
-
-    
-    <div class="card">
-        <img src="./Assets/games//Color blast/rain.jpg">
-        <h2>Color Blast</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Color blast/index.html'">Go!</button><br>
-    </div>
 
 
-
-  
-
-    <div class="card">
-        <img src="./Assets/games/Password Generator/image.png">
-        <h2>Password Generator</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Password Generator/index.html'">Go!</button><br>
-
-    </div>
     <div class="card">
       <img src="./Assets/games/Guess the word/display.png">
         <h2>Guess the word</h2>
@@ -487,21 +435,6 @@
         <button onclick="window.location.href='./Assets/games/uno/index.html'">Go!</button><br>
     </div>
 
-    <div class="card">
-      <img src="./Meme Generator/memes.jpg">
-      <h2>Meme Generator</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='Meme Generator/index.html'">Go!</button><br>
-  </div>
-
-
-  <div class="card">
-    <img src="./Riddles/riddles.jpg">
-    <h2>Riddles</h2>
-    <!-- Button to navigate to page1.html -->
-    <button onclick="window.location.href='Riddles/index.html'">Go!</button><br>
-</div>
-
 
      <div class="card">
         <img src="./Assets/games/Highway-Race/image.jpg">
@@ -517,22 +450,7 @@
         <!-- Button to navigate to page1.html -->
         <button onclick="window.location.href='./Assets/bird shooting/index.html'">Go!</button><br>
      </div>
-     <div class="card">
-        <img src="./Tic-Tac-Toe/Image.png">
-        <h2>Tic-Tac-Toe</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Tic-Tac-Toe/index.html'">Go!</button><br>
-     </div>
 
-
-  
-       <div class="card">
-          <img src="./Assets/games/Highway-Race/image.jpg">
-          <h2>Highway Racing</h2>
-          <!-- Button to navigate to page1.html -->
-          <button onclick="window.location.href='./Assets/games/Highway-Race/index.html'">Go!</button><br>
-       </div>
- 
        
     <div class="card">
         <img src="./Bubble-Game/Bubble Game.png" />
@@ -556,16 +474,6 @@
         <button onclick="window.location.href='./Assets/games/chess_2023-main/index.html'">Go!</button><br>
      </div>
 
-
-
- <div class="card">
-
-      <img src="./Meme Generator/memes.jpg">
-      <h2>Meme Generator</h2>
-      <!-- Button to navigate to page1.html -->
-      <button onclick="window.location.href='Meme Generator/index.html'">Go!</button><br>
-  </div>
-
   <div class="card">
     <img src="./Riddles/riddles.jpg">
     <h2>Riddles</h2>
@@ -574,12 +482,6 @@
 </div>
 
 
-     <div class="card">
-        <img src="./Assets/games/Highway-Race/image.jpg">
-        <h2>Highway Racing</h2>
-        <!-- Button to navigate to page1.html -->
-        <button onclick="window.location.href='./Assets/games/Highway-Race/index.html'">Go!</button><br>
-     </div>
      <div class="card">
         <img src="./Bmi/Screenshot (75).png">
         <h2>BMI Calculator</h2>
@@ -603,6 +505,13 @@
         <!-- Button to navigate to page1.html -->
         <button onclick="window.location.href='./Assets/games/ping pong game/Ping-pong.html'">Go!</button><br />
     </div>
+
+
+        <img src="./images/Screenshot 2024-02-02 175253.png">
+        <h2>Weather App</h2>
+        <!-- Button to navigate to page1.html -->
+        <button onclick="window.location.href='https://pranavbarthwal.github.io/weather_app/'">Go!</button><br>
+     </div>
 
 
      <footer>
@@ -700,6 +609,34 @@
                 }
             });
         }
+        // Check if the user has accepted or declined cookies
+if (!document.cookie.includes("cookieConsentAccepted") && !document.cookie.includes("cookieConsentDeclined")) {
+    showCookieConsent();
+}
+
+// Function to show the cookie consent popup
+function showCookieConsent() {
+    var cookieConsent = document.getElementById("cookieConsent");
+    cookieConsent.style.display = "flex";
+}
+
+// Function to accept cookies and hide the popup
+function acceptCookies() {
+    var cookieConsent = document.getElementById("cookieConsent");
+    cookieConsent.style.display = "none";
+
+    // Set a cookie to remember that the user has accepted cookies
+    document.cookie = "cookieConsentAccepted=true; max-age=" + 60 * 60 * 24 * 30; // Set to expire in 30 days
+}
+
+// Function to decline cookies and hide the popup
+function declineCookies() {
+    var cookieConsent = document.getElementById("cookieConsent");
+    cookieConsent.style.display = "none";
+
+    // Set a cookie to remember that the user has declined cookies
+    document.cookie = "cookieConsentDeclined=true; max-age=" + 60 * 60 * 24 * 30; // Set to expire in 30 days
+}
     </script>
 </body>
 
