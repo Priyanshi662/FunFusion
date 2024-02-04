@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Ghost Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div id="canvas_container">
+    <canvas></canvas>
+  </div>
+  <div id="gui">
+    Time: {{ timeLimit }}<br>
+    Found: {{ score }} of {{ GHOSTS_COUNT }}<br>
+  </div>
+  <div id="overlay" :class="inGame ? '' : 'shown'">
+    <div id="info">
+      <h1>Ghost Boo-sters!<br></h1><small>Use your mouse as a flashlight and find all the ghosts in the attic before the time runs out.</small>
+      <p>
+        <button @click="startGame()">Start</button>
+      </p>
+    </div>
+  </div>
+  <div id="timeout" :class="gameOver ? 'shown' : ''">{{message}}<br>
+    <button @click="restartGame()">Again?</button>
+  </div>
+  <div class="hidden-elements"><img id="wood" src="https://firebasestorage.googleapis.com/v0/b/portfolio-vue-2019.appspot.com/o/tmp%2Fwooden_floor.jpg?alt=media&amp;token=11553a04-d041-42ed-97f8-1b1f147a92d7" alt="wood"/><img id="ghost" src="data:image/png;base64,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" alt="ghost"/><img id="ghost_tagged" src="data:image/png;base64,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" alt="ghost_tagged"/></div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
+<script src='https://firebasestorage.googleapis.com/v0/b/portfolio-vue-2019.appspot.com/o/tmp%2Filluminated.js?alt=media&amp;token=f993a91a-8c10-4c24-a2fc-338c52d6c10f'></script><script  src="./script.js"></script>
+
+</body>
+</html>
