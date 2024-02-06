@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title>Fun Fusion</title>
     <link rel="stylesheet" href="./Assets/css/style.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/Assets/css/style.css">
 
@@ -554,6 +554,42 @@
         <button onclick="window.location.href='Recipe-App/index.html'">Go!</button><br>
      </div>
 
+
+
+
+    <br>
+
+     <div class="contact section" id="contact" style=" width:100vw; margin-left: 150px;">
+        <h1 style="color: white;">Contact Us</h1>
+
+        <div class="contact-form" style="display: flex; border-radius: 10px; background-color: rgba(255, 253, 253, 0.425);">
+            <div class="left" style="margin-left:190px; margin-top: 50px; margin-bottom: 50px;">
+              <!-- Add your image here -->
+              <img src="./images/pngaaa.com-4606018.png" alt="Contact Image" style="max-width: 100%; width: 500px;">
+            </div>
+            <div class="right" style="margin-left:50px; margin-right: 200px; margin-top: 50px; margin-bottom: 50px;">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputName" class="form-label text-light">Name</label>
+                  <input type="text" class="form-control" id="exampleInputName" required placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail2" class="form-label text-light">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" required placeholder="Enter your email">
+                  <div id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputMessage" class="form-label text-light">Message</label>
+                  <textarea class="form-control" id="exampleInputMessage" rows="4" required placeholder="feel free to ask your queries!"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitButton" onclick="sendMail()">Submit</button>
+              </form>
+              </div>
+            </div>
+        </div>
+    </div>    
+
+    <br><br>
 
 
      <footer  data-aos="zoom-in-up">
