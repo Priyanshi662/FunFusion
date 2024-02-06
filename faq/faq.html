@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Fun Fusion</title>
+    <link rel="stylesheet" href="./Assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <link rel="stylesheet" href="./faq.css">
+
+    <link rel="icon" type="image/x-icon" href="../images/funfusion-logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="Header" style="position: fixed;width: 100vw; top:0; margin: 0;border-radius:0;z-index: 1000;">
+        <h1>Fun Fusion</h1>
+        <div style="display: flex; gap: 1rem;">
+            <a href="../rate/index.html" class="rate-us-btn">&#9733; Rate Us</a>
+            <a href="" onclick="window.location.reload()" class="rate-us-btn">FAQ</a>
+            <a href="../contributor.html" class="rate-us-btn">Contributors</a>
+        </div>
+        <div id="toggelBtn" onclick="openSidebar()">&#9776;</div>
+    </div>
+
+    <!-- FAQ Main -->
+    <main class="faqWrapper">
+        <div class="faqHeading">Frequently Asked Questions</div>
+        <div class="faqs">
+            <div class="faqs_container"></div>
+            <div class="faqs_container"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footers">
+            <div class="summary">
+                <h1>Fun Fusion</h1>
+                <div class="what">
+                    <p>Fun Fusion is a hub of web applications dedicated to providing entertainment and interactive
+                        experiences. Explore our collection of games and creative tools designed to bring joy and
+                        excitement
+                        to your online adventures.</p>
+                </div>
+            </div>
+            <div class="">
+                <div class="contact">
+                    <h1>Contact Us</h1>
+                    <p>Have questions or suggestions? Feel free to reach out to our team. We'd love to hear from you!
+                    </p>
+                    <div class="">
+                        Email: info@funfusion.com <br>
+                        Phone: [Your Phone Number]
+                    </div>
+                </div>
+                <div class="social">
+                    <a href="https://github.com/Priyanshi662/FunFusion" target="_blank"><i
+                            class="bi bi-github hi"></i></a>
+                    <a href="#"><i class="bi bi-twitter hi"></i></a>
+                    <a href="#"><i class="bi bi-linkedin hi"></i></a>
+                    <a href="#"><i class="bi bi-facebook hi"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2024 Fun Fusion. All rights reserved.</p>
+            <p>Privacy Policy | Terms of Use</p>
+        </div>
+    </footer>
+    <script src="faq.js"></script>
+    <script>
+        //javascript for heading typing effect
+        const dynamicText = document.querySelector(".inner-circle");
+        const words = ["FUN FUSION"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        const typeEffect = () => {
+            const currentWord = words[wordIndex];
+            const currentChar = currentWord.substring(0, charIndex);
+            dynamicText.textContent = currentChar;
+            dynamicText.classList.add("stop-blinking");
+
+            if (!isDeleting && charIndex < currentWord.length) {
+                charIndex++;
+                setTimeout(typeEffect, 200);
+            } else if (isDeleting && charIndex > 0) {
+                charIndex--;
+                setTimeout(typeEffect, 100);
+            } else {
+                isDeleting = !isDeleting;
+                dynamicText.classList.remove("stop-blinking");
+                wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+                setTimeout(typeEffect, 1200);
+            }
+        }
+        typeEffect();
+        // JavaScript to handle sidebar functionality
+        function openSidebar() {
+            document.getElementById("sidebar").style.right = "0";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.right = "-300px";
+        }
+
+
+        // JavaScript to handle search functionality
+
+        function searchGames() {
+            var input, filter, cards, card, title, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            cards = document.querySelectorAll(".card");
+
+            cards.forEach(function (card) {
+                title = card.getElementsByTagName("h2")[0];
+                txtValue = title.textContent || title.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+        // Check if the user has accepted or declined cookies
+        if (!document.cookie.includes("cookieConsentAccepted") && !document.cookie.includes("cookieConsentDeclined")) {
+            showCookieConsent();
+        }
+
+        // Function to show the cookie consent popup
+        function showCookieConsent() {
+            var cookieConsent = document.getElementById("cookieConsent");
+            cookieConsent.style.display = "flex";
+        }
+
+        // Function to accept cookies and hide the popup
+        function acceptCookies() {
+            var cookieConsent = document.getElementById("cookieConsent");
+            cookieConsent.style.display = "none";
+
+            // Set a cookie to remember that the user has accepted cookies
+            document.cookie = "cookieConsentAccepted=true; max-age=" + 60 * 60 * 24 * 30; // Set to expire in 30 days
+        }
+
+        // Function to decline cookies and hide the popup
+        function declineCookies() {
+            var cookieConsent = document.getElementById("cookieConsent");
+            cookieConsent.style.display = "none";
+
+            // Set a cookie to remember that the user has declined cookies
+            document.cookie = "cookieConsentDeclined=true; max-age=" + 60 * 60 * 24 * 30; // Set to expire in 30 days
+        }
+    </script>
+</body>
+
+</html>
