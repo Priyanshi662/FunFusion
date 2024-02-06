@@ -12,6 +12,10 @@
     margin: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
   }
   .rate-us-btn {
     color: #4caf50;
@@ -23,7 +27,7 @@
 }
 
 .rate-us-btn:hover {
-    background-color: #03b300;
+    background-color: #0f0c0c;
     color:#fff;
 }
 
@@ -424,7 +428,7 @@ a:hover {
 
 #myBtn:hover {
   background-color: #696966; /* Add a dark-grey background on hover */
-
+}
 html {
   scroll-behavior: smooth;
 }
