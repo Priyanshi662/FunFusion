@@ -1,0 +1,195 @@
+::-moz-selection {
+  background: transparent;
+}
+
+::selection,
+::-moz-selection {
+  background: transparent;
+}
+
+*:focus {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+* {
+  outline: none;
+}
+
+body {
+  background: #1e1308;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  font-family: "Permanent Marker", cursive;
+  font-size: 22px;
+}
+body p {
+  width: 100%;
+  margin: 0;
+  line-height: 1;
+}
+body canvas {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  cursor: -webkit-grab;
+  cursor: grab;
+  image-rendering: auto;
+}
+body #overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 998;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all ease-in-out 0.3s;
+}
+body #overlay.shown {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+  display: flex;
+}
+body #info {
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+}
+body #info small {
+  line-height: 1;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body h1 {
+  font-weight: 400;
+  margin: 0 0 10px;
+  line-height: 1;
+}
+body #gui {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  z-index: 999;
+  text-align: right;
+  font-size: 24px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+body #gui span {
+  font-size: 60px;
+  margin-left: 5px;
+}
+body #timeout {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -55%) scale3d(1, 1, 1) rotate(-10deg);
+  transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) 3s;
+  z-index: 999;
+  font-size: 5vw;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px 35px;
+  line-height: 1;
+  text-align: center;
+  display: none;
+}
+body #timeout.shown {
+  transform: translate(-50%, -55%) scale3d(1.3, 1.3, 1) rotate(-1deg);
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+  display: block;
+}
+body .hidden-elements {
+  display: none;
+}
+body button {
+  border: none;
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-family: "Permanent Marker", cursive;
+  border-radius: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 30px;
+  background-color: #ff6b02;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+  color: #fff;
+}
+body button:hover, body button:focus {
+  background-color: #ce5500;
+}
+
+@media screen and (max-width: 990px) {
+  body {
+    font-size: 12px;
+  }
+  body #info {
+    bottom: 25px;
+    left: 25px;
+    top: 20px;
+  }
+  body #gui {
+    top: 20px;
+  }
+  body h1 small {
+    display: none;
+  }
+  body p:first-of-type {
+    margin-top: 0;
+  }
+  body .range-slider {
+    bottom: 45px;
+    top: initial;
+    width: 100%;
+    right: 35px;
+    transform: translateY(0);
+  }
+  body #timeout {
+    padding: 0px 12px;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

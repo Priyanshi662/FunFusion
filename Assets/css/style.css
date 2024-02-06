@@ -405,6 +405,7 @@ a:hover {
   background-color: #0d4a1c;
 }
 
+
 #myBtn {
   display: none; 
   position: fixed; 
@@ -423,4 +424,26 @@ a:hover {
 
 #myBtn:hover {
   background-color: #696966; /* Add a dark-grey background on hover */
+
+html {
+  scroll-behavior: smooth;
+}
+
+#arrow {
+  position: fixed;
+  top: 90vh;
+  left: 95vw;
+  background-color: aqua;
+  text-decoration: none;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 40%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 2vw;
+  border: aqua;
+  z-index: 1000;
+
 }
