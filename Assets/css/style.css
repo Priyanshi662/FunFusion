@@ -27,6 +27,20 @@
     color:#fff;
 }
 
+.Contributors{
+  color: #4caf50;
+  background-color:#fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.Contributors:hover {
+  background-color: #03b300;
+  color:#fff;
+}
+
 #toggelBtn {
     cursor: pointer;
     font-size: 20px;
