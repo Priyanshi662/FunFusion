@@ -126,3 +126,23 @@ body{
     width: calc(100% / 2 - 7px);
   }
 }
+
+.word {
+  display: inline-block;
+  font-size: 24px;
+}
+
+
+.word .letter-hover:hover {
+  color: #00bbff;
+  cursor: pointer;
+  
+}
+.details {
+  transition: color 0.3s; 
+}
+
+.details:hover {
+  color: #2f00ff; 
+  cursor: pointer; 
+}
