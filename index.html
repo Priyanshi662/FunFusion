@@ -24,6 +24,8 @@
         </div>
         <p>This website uses cookies to ensure you get the best experience on our website. <a href="#"
                 style="color: #f8f393;">Learn more</a></p>
+        <p>This website uses cookies to ensure you get the best experience on our website. <a href="#"
+                style="color: #f8f393;">Learn more</a></p>
         <div class="cookie-buttons">
             <button onclick="acceptCookies()">Accept</button>
             <button onclick="declineCookies()">Decline</button>
@@ -40,6 +42,12 @@
                 <span></span>
                 <span></span>
                 <span></span>
+                <div class="inner-circle">
+                </div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
         <div class="search" data-aos="fade-right">
@@ -47,6 +55,7 @@
                 <!-- search bar to find the games on the web page -->
                 <input type="text" id="searchInput" placeholder="Search for a game..." oninput="searchGames()">
                 <button onclick="searchGames()" class="searchbtn">
+                    <img src="search.png" alt="Search">
                     <img src="search.png" alt="Search">
                 </button>
             </div>
@@ -56,11 +65,15 @@
 
     <div class="Header">
         <h1>Fun Fusion</h1>
-        <a href="./rate/index.html" class="rate-us-btn">&#9733; Rate Us</a>
-        <a href="./login/index.html" class="rate-us-btn"> Log In</a>
+        <div style="display: flex; gap: 1rem;">
+            <a href="./rate/index.html" class="rate-us-btn">&#9733; Rate Us</a>
+            <a href="./faq/faq.html" class="rate-us-btn">FAQ</a>
+            <a href="contributor.html" class="rate-us-btn">Contributors</a>
+            <a href="./login/index.html" class="rate-us-btn"> Log In</a>
+        </div>
         <div id="toggelBtn" onclick="openSidebar()">&#9776;</div>
     </div>
-    <a href="contributor.html">Contributors</a>
+
 
     <div class="SearchBar-Box">
         <!-- search bar to find the games on the web page -->
@@ -782,7 +795,7 @@
             AOS.init({
                 duration: 2000,
             });
-        }
+        
         // Check if the user has accepted or declined cookies
 if (!document.cookie.includes("cookieConsentAccepted") && !document.cookie.includes("cookieConsentDeclined")) {
     showCookieConsent();
