@@ -102,12 +102,21 @@
     }
   }
 
+  #score {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px; /* Make font size bigger */
+    font-weight: bold; /* Make font weight bold */
+  }
+
   </style>
 </head>
 <body>
   <a href="../index.html" class="button">Back</a>
 <canvas width="400" height="400" id="game"></canvas>
-<div id="score" style="color: white; position: absolute; top: 10px; right: 10px;"><h1><b>Score: 0</b></h1></div>
+<div id="score" style="color: white; position: absolute; top: 10px; right: 10px;">Score: 0</div>
 <script>
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
