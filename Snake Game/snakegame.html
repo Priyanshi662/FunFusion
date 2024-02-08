@@ -107,7 +107,8 @@
   </style>
 </head>
 <body>
-  <a href="../index.html" class="button">Back</a>
+<a href="../index.html" class="button">Back</a>
+<p id="score" style="color: white; position: absolute; top: 10px; right: 10px; font-size: 20px;">Score: 0</p>
 <canvas width="400" height="400" id="game"></canvas>
 <script>
 var canvas = document.getElementById('game');
@@ -115,6 +116,7 @@ var context = canvas.getContext('2d');
 
 var grid = 16;
 var count = 0;
+var score = 0; // added score variable
   
 var snake = {
   x: 160,
@@ -195,6 +197,10 @@ function loop() {
     // snake ate apple
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
+      score +=2; // increase score by 2 when the snake eats the apple
+
+      // update the score display
+      document.getElementById("score").innerText = "Score: " + score;
 
       // canvas is 400x400 which is 25x25 grids 
       apple.x = getRandomInt(0, 25) * grid;
@@ -215,6 +221,10 @@ function loop() {
 
         apple.x = getRandomInt(0, 25) * grid;
         apple.y = getRandomInt(0, 25) * grid;
+
+        //reset score when game is reset
+        score = 0;
+        document.getElementById("score").innerText = "Score: " + score;
       }
     }
   });
