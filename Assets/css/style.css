@@ -4,6 +4,30 @@
   padding: 0;
 }
 
+:root[data-applied-mode="light"] {
+  color-scheme: light;
+  --text: black;
+  --background: white;
+  --background-image: url(./image.png);
+}
+:root[data-applied-mode="dark"] {
+  color-scheme: dark;
+  --text: white;
+  --background: black;
+  --background-image: url("bg2.avif");
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+}
+
+#theme-toggle{
+  padding: 5px;
+  border-radius: 10px;
+  height: 41px;
+}
+
 #preloader {
   min-height: 100vh;
   min-width: 100vw;
@@ -98,7 +122,7 @@
 
 
 body {
-  background-image: url("bg2.avif");
+  background-image: var(--background-image);
   background-size: contain;
 }
 .header{
