@@ -1,7 +1,49 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
   margin: 0;
   padding: 0;
+}
+
+#preloader {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: rgb(38, 38, 38) url('./Loader.gif') no-repeat center center ;
+  background-size: 20%;
+  position: fixed;
+  z-index: 1000000000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+
+.text{
+  position: absolute;
+  top: 65%;
+  left: 51%;
+  transform: translate(-50%,0);
+  font-size: 3rem;
+  letter-spacing: 1.8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  animation-name: fade;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
 .Header {
