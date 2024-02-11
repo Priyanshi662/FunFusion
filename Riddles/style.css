@@ -9,7 +9,23 @@
     height: 50px;
     font-size: xx-large;
     font-weight: bolder;
+    position: relative;
+    display: flex;
+    transition: all 0.3s ease; /* Adding smooth transition effect */
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px ;
+    font-family: 'Dancing Script', cursive;
+  /* Adding shadow effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.btn:hover {
+  transform: scale(1.2); /* Increasing the size on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust the shadow effect as desired */
+}
+
+
 body{
     background-image: url('bg.avif');
     align-items: center;
