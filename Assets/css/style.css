@@ -496,3 +496,13 @@ html {
   z-index: 1000;
 
 }
+::-webkit-scrollbar{
+  width: 15px;
+}
+::-webkit-scrollbar-track{
+  background: #d1e5ff;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(#03b300 , #0d4a1c);
+  border-radius: 10px;
+}
