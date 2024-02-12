@@ -12,7 +12,7 @@ async function generate() {
     let select = document.querySelector('select');
 
     if (select.value == "") {
-        output.innerHTML = "Enter the Gender !!";
+        out.innerHTML = "Enter the Gender !!";
     } else {
 
         if(select.value == "male") {
