@@ -1,4 +1,4 @@
-//Initial References
+
 
 let emoji = document.querySelector(".emoji");
 
@@ -12,20 +12,17 @@ let eyesBtn = document.getElementById("eyes");
 let eyebrowsBtn = document.getElementById("eyebrows");
 let mouthBtn = document.getElementById("mouth");
 
-//Setting up counters
 let counter1 = 0;
 let counter2 = 0;
 let counter3 = 0;
 let counter4 = 0;
 
-//Setting up total counts for different images
 let totalCounts = {
   eyeCount: 5,
   eyebrowsCount: 4,
   mouthCount: 5,
 };
 
-//Adding event listener to each button
 colorBtn.addEventListener("click", () => {
   emoji.style.backgroundColor = colors[counter1];
   counter1 = counter1 < colors.length - 1 ? counter1 + 1 : 0;
@@ -56,7 +53,6 @@ download.addEventListener('click', () => {
   html2canvas(emoji).then((canvas) => {
     const imageDataURL = canvas.toDataURL("image/jpeg");
 
-    // Create a download link for the image
     const a = document.createElement("a");
     a.href = imageDataURL;
     a.download = "emoji.jpeg";
