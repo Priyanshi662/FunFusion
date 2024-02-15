@@ -15,7 +15,7 @@
     padding: 0 0 0 2rem;
     text-align: center;
     font-size: 2rem;
-    text-shadow: 0px 0px 20px rgb(51, 34, 101), 0px 0px 40px rgb(121, 102, 175);
+    /* text-shadow: 0px 0px 20px rgb(51, 34, 101), 0px 0px 40px rgb(121, 102, 175); */
     color: rgb(0, 212, 255, 1);
 }
 
@@ -57,6 +57,7 @@ span:nth-child(1){
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: black;
 }
 
 .faq_title .plus {
@@ -75,6 +76,7 @@ span:nth-child(1){
     font-family: Inter;
     color: #f7f7f7;
     transition: height 0.2s ease-in-out, padding 0.2s ease-in-out;
+    color: rgb(46, 44, 44);
 }
 
 a {
