@@ -15,9 +15,20 @@
         <h1>Sudoku</h1>
     </div>
     <div id="controls" class="button-container">
+        <div class="up-btn">
         <button type="button" class="btn primary" data-action="newGame">New </button>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+        </select>
+        <div id="lives">Lives: <span id="lifeCount">3</span></div>
+    </div>
+    <div class="down-btn">
         <button type="button" class="btn primary" data-action="solve">Answer</button>
         <button type="button" class="btn primary" data-action="validate">Check</button>
+    </div>
+        
     </div>
     <div class="container"></div>
 
