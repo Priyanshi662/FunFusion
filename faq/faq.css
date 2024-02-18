@@ -103,3 +103,34 @@ a:hover {
         text-align: center;
     }
 }
+
+#progress{
+    background-color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 60px;
+    width: 60px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0 , 0 , 0 , 0.2);
+    cursor: pointer;
+   
+  }
+  #progress-value{
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #4caf50;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    font-weight: 700;
+    /* color: #001a2e; */
+    color: white;
+  }
+  html{
+    overflow-x: hidden;
+  }
