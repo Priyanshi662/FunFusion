@@ -4,7 +4,6 @@ body {
     justify-content: center;
     flex-flow: column;
     margin: 0;
-    overflow: hidden;
     font-family: "Lato", sans-serif;
     background-color: #394240;
     color: #fff;
@@ -103,6 +102,23 @@ body {
     margin: 20px 0;
 }
 
+.up-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 30vw;
+    margin-bottom: 20px;
+}
+
+.down-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 20vw;
+    margin-left: 5vw;
+}
 .btn {
     padding: 10px 20px;
     font-size: 16px;
@@ -118,4 +134,22 @@ body {
 
 .btn:hover {
     opacity: 0.8;
+}
+
+#difficulty{
+    height: 35px;
+    width: 80px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+#lives{
+    height: 35px;
+    width: 80px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background-color:  #4c9689;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
