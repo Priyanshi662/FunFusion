@@ -6,10 +6,24 @@
     <title>Emoji Stars Rating</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-  <img src="./emojis/Screenshot from 2024-02-03 15-17-44.png" alt="Your Image" class="above-wrapper-image">
-  <div class="wrapper">
+   <div class="Header" data-aos="fade-down-right" data-aos="slide-right">
+        <div class="left">
+            <h1>Fun Fusion</h1>
+        </div>
+        <div class="right">
+            <a href="index.html" class="rate-us-btn"></i>HOME</a>
+            <a href="faq/faq.html" class="rate-us-btn"></i>FAQ</a>
+            <a href="./login/index.html" class="rate-us-btn"> LOGIN</a>
+            <a href="./rate/index.html" class="rate-us-btn">&#9733; RATE US</a>
+            <a href="contributor.html" class="rate-us-btn">CONTRIBUTORS</a>
+            <a href="contact.html" class="rate-us-btn">CONTACT</a>
+        </div>
+    </div>
+  <!-- <img src="./emojis/Screenshot from 2024-02-03 15-17-44.png" alt="Your Image" class="above-wrapper-image"> -->
+  <div class="wrapper" data-aos="zoom-in-up">
     <input type="radio" name="rate" id="star-1">
     <input type="radio" name="rate" id="star-2">
     <input type="radio" name="rate" id="star-3">
@@ -48,8 +62,47 @@
       
     </div>
   </div>
-  
-  
+  <footer data-aos="slide-left">
+    <div class="footers">
+        <div class="summary">
+            <h1>Fun Fusion</h1>
+            <div class="what">
+                <p>Fun Fusion is a hub of web applications dedicated to providing entertainment and interactive
+                    experiences. Explore our collection of games and creative tools designed to bring joy and
+                    excitement
+                    to your online adventures.</p>
+            </div>
+        </div>
+        <div class="">
+            <div class="contact">
+                <h1>Contact Us</h1>
+                <p>Have questions or suggestions? Feel free to reach out to our team. We'd love to hear from you!
+                </p>
+                <div class="">
+                    Email: info@funfusion.com <br>
+                    Phone: [Your Phone Number]
+                </div>
+            </div>
+            <div class="social">
+                <a href="https://github.com/Priyanshi662/FunFusion" target="_blank"><i
+                        class="bi bi-github hi"></i></a>
+                <a href="#"><i class="bi bi-twitter hi"></i></a>
+                <a href="#"><i class="bi bi-linkedin hi"></i></a>
+                <a href="#"><i class="bi bi-facebook hi"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copy">
+        <p>&copy; 2024 Fun Fusion. All rights reserved.</p>
+        <p>Privacy Policy | Terms of Use</p>
+    </div>
+</footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 2000,
+    });
+</script>
 
 </body>
 </html>
