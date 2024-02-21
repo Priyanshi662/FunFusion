@@ -1,259 +1,253 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(#FED151, #DE981F);
-}
-.wrapper{
-  background: #f6f6f6;
-  max-width: 360px;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
-}
-.wrapper .content{
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.wrapper .outer{
-  height: 135px;
-  width: 135px;
-  overflow: hidden;
-}
-.outer .emojis{
-  height: 500%;
-  display: flex;
-  flex-direction: column;
-}
-.outer .emojis li{
-  height: 20%;
-  width: 100%;
-  list-style: none;
-  transition: all 0.3s ease;
-}
-.outer li img{
-  height: 100%;
-  width: 100%;
-}
-#star-2:checked ~ .content .emojis .slideImg{
-  margin-top: -135px;
-}
-#star-3:checked ~ .content .emojis .slideImg{
-  margin-top: -270px;
-}
-#star-4:checked ~ .content .emojis .slideImg{
-  margin-top: -405px;
-}
-#star-5:checked ~ .content .emojis .slideImg{
-  margin-top: -540px;
-}
-.wrapper .stars{
-  margin-top: 30px;
-}
-.stars label{
-  font-size: 30px;
-  margin: 0 3px;
-  color: #ccc;
-}
-#star-1:hover ~ .content .stars .star-1,
-#star-1:checked ~ .content .stars .star-1,
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+ 
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow:hidden;
+  }
 
-#star-2:hover ~ .content .stars .star-1,
-#star-2:hover ~ .content .stars .star-2,
-#star-2:checked ~ .content .stars .star-1,
-#star-2:checked ~ .content .stars .star-2,
-
-#star-3:hover ~ .content .stars .star-1,
-#star-3:hover ~ .content .stars .star-2,
-#star-3:hover ~ .content .stars .star-3,
-#star-3:checked ~ .content .stars .star-1,
-#star-3:checked ~ .content .stars .star-2,
-#star-3:checked ~ .content .stars .star-3,
-
-#star-4:hover ~ .content .stars .star-1,
-#star-4:hover ~ .content .stars .star-2,
-#star-4:hover ~ .content .stars .star-3,
-#star-4:hover ~ .content .stars .star-4,
-#star-4:checked ~ .content .stars .star-1,
-#star-4:checked ~ .content .stars .star-2,
-#star-4:checked ~ .content .stars .star-3,
-#star-4:checked ~ .content .stars .star-4,
-
-#star-5:hover ~ .content .stars .star-1,
-#star-5:hover ~ .content .stars .star-2,
-#star-5:hover ~ .content .stars .star-3,
-#star-5:hover ~ .content .stars .star-4,
-#star-5:hover ~ .content .stars .star-5,
-#star-5:checked ~ .content .stars .star-1,
-#star-5:checked ~ .content .stars .star-2,
-#star-5:checked ~ .content .stars .star-3,
-#star-5:checked ~ .content .stars .star-4,
-#star-5:checked ~ .content .stars .star-5{
-  color: #fd4;
-}
-.wrapper .footer{
-  border-top: 1px solid #ccc;
-  background: #f2f2f2;
-  width: 100%;
-  height: 55px;
-  padding: 0 20px;
-  border-radius: 0 0 10px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.footer span{
-  font-size: 17px;
-  font-weight: 400;
-}
-.footer .text::before{
-  content: "Rate your experience";
-}
-.footer .numb::before{
-  content: "0 out of 5";
-}
-#star-1:checked ~ .footer .text::before{
-  content: "I just hate it";
-}
-#star-1:checked ~ .footer .numb::before{
-  content: "1 out of 5";
-}
-#star-2:checked ~ .footer .text::before{
-  content: "I don't like it";
-}
-#star-2:checked ~ .footer .numb::before{
-  content: "2 out of 5";
-}
-#star-3:checked ~ .footer .text::before{
-  content: "This is awesome";
-}
-#star-3:checked ~ .footer .numb::before{
-  content: "3 out of 5";
-}
-#star-4:checked ~ .footer .text::before{
-  content: "I just like it";
-}
-#star-4:checked ~ .footer .numb::before{
-  content: "4 out of 5";
-}
-#star-5:checked ~ .footer .text::before{
-  content: "I just love it";
-}
-#star-5:checked ~ .footer .numb::before{
-  content: "5 out of 5";
-}
-input[type="radio"]{
-  display: none;
-}
-form header{
-    width: 100%;
-    font-size: 25px;
-    color: #fe7;
-    font-weight: 500;
-    margin: 5px 0 20px 0;
-    text-align: center;
-    transition: all 0.2s ease;
-  }
-  form .textarea{
-    height: 100px;
-    width: 100%;
-    overflow: hidden;
-  }
-  form .textarea textarea{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    color: #a11818;
-    border: 1px solid #333;
-    background: #f4e49b;
-    padding: 10px;
-    font-size: 17px;
-    resize: none;
-  }
-  .textarea textarea:focus{
-    border-color: #444;
-  }
-  form .btn{
-    height: 45px;
-    width: 100%;
-    margin: 15px 0;
-  }
-  form .btn button{
-    height: 100%;
-    width: 100%;
-    border: 1px solid #444;
-    outline: none;
-    background: #f4e49b;
-    color: #999;
-    font-size: 17px;
-    font-weight: 500;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  form .btn button:hover{
-    background: #1b1b1b;
-  }
-  .above-wrapper-image {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
-    opacity: 70%;
-  }
-  
   .wrapper {
-    position: relative;
-    background: #f6f6f6;
+    background: rgba(210, 215, 220, 0.1);
+    backdrop-filter: blur(2rem);
+    border-radius: 15px;
+    padding: 1rem;
+    position: absolute;
+    right: 7rem;
     max-width: 360px;
     width: 100%;
-    border-radius: 10px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
     z-index: 1;
+  }  
+  .wrapper .content{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
-  
-  @media screen and (max-width: 375px) {
-    .above-wrapper-image {
-      width: 90%; /* Adjust this value based on your design */
-      max-width: none;
-    }
-  
-    .wrapper {
-      max-width: 90%; /* Adjust this value based on your design */
-    }
+  .wrapper .outer{
+    height: 135px;
+    width: 135px;
+    overflow: hidden;
   }
-  
-  @media screen and (min-width: 376px) and (max-width: 540px) {
-    .above-wrapper-image {
-      width: 80%; /* Adjust this value based on your design */
-      max-width: none;
-    }
-  
-    .wrapper {
-      max-width: 80%; /* Adjust this value based on your design */
-    }
+  .outer .emojis{
+    height: 500%;
+    display: flex;
+    flex-direction: column;
   }
-  
-  @media screen and (min-width: 541px) and (max-width: 1024px) {
-    .above-wrapper-image {
-      width: 70%; /* Adjust this value based on your design */
-      max-width: none;
-    }
-  
-    .wrapper {
-      max-width: 70%; /* Adjust this value based on your design */
-    }
+  .outer .emojis li{
+    height: 20%;
+    width: 100%;
+    list-style: none;
+    transition: all 0.3s ease;
   }
-  
+  .outer li img{
+    height: 100%;
+    width: 100%;
+  }
+  #star-2:checked ~ .content .emojis .slideImg{
+    margin-top: -135px;
+  }
+  #star-3:checked ~ .content .emojis .slideImg{
+    margin-top: -270px;
+  }
+  #star-4:checked ~ .content .emojis .slideImg{
+    margin-top: -405px;
+  }
+  #star-5:checked ~ .content .emojis .slideImg{
+    margin-top: -540px;
+  }
+  .wrapper .stars{
+    margin-top: 30px;
+    margin-left: 1.8rem;;
+  }
+  .stars label{
+    font-size: 30px;
+    margin: 0 3px;
+    color: #ccc;
+  }
+  #star-1:hover ~ .content .stars .star-1,
+  #star-1:checked ~ .content .stars .star-1,
+
+  #star-2:hover ~ .content .stars .star-1,
+  #star-2:hover ~ .content .stars .star-2,
+  #star-2:checked ~ .content .stars .star-1,
+  #star-2:checked ~ .content .stars .star-2,
+
+  #star-3:hover ~ .content .stars .star-1,
+  #star-3:hover ~ .content .stars .star-2,
+  #star-3:hover ~ .content .stars .star-3,
+  #star-3:checked ~ .content .stars .star-1,
+  #star-3:checked ~ .content .stars .star-2,
+  #star-3:checked ~ .content .stars .star-3,
+
+  #star-4:hover ~ .content .stars .star-1,
+  #star-4:hover ~ .content .stars .star-2,
+  #star-4:hover ~ .content .stars .star-3,
+  #star-4:hover ~ .content .stars .star-4,
+  #star-4:checked ~ .content .stars .star-1,
+  #star-4:checked ~ .content .stars .star-2,
+  #star-4:checked ~ .content .stars .star-3,
+  #star-4:checked ~ .content .stars .star-4,
+
+  #star-5:hover ~ .content .stars .star-1,
+  #star-5:hover ~ .content .stars .star-2,
+  #star-5:hover ~ .content .stars .star-3,
+  #star-5:hover ~ .content .stars .star-4,
+  #star-5:hover ~ .content .stars .star-5,
+  #star-5:checked ~ .content .stars .star-1,
+  #star-5:checked ~ .content .stars .star-2,
+  #star-5:checked ~ .content .stars .star-3,
+  #star-5:checked ~ .content .stars .star-4,
+  #star-5:checked ~ .content .stars .star-5{
+    color: #fd4;
+  }
+  .wrapper .footer{
+    border-top: 1px solid #4e0c0c;
+    width: 20rem;
+    height: 3rem;
+    padding: 0 20px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer span{
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+  }
+  .footer .text::before{
+    content: "Rate your experience";
+  }
+  .footer .numb::before{
+    content: "0 out of 5";
+  }
+  #star-1:checked ~ .footer .text::before{
+    content: "I just hate it";
+  }
+  #star-1:checked ~ .footer .numb::before{
+    content: "1 out of 5";
+  }
+  #star-2:checked ~ .footer .text::before{
+    content: "I don't like it";
+  }
+  #star-2:checked ~ .footer .numb::before{
+    content: "2 out of 5";
+  }
+  #star-3:checked ~ .footer .text::before{
+    content: "This is awesome";
+  }
+  #star-3:checked ~ .footer .numb::before{
+    content: "3 out of 5";
+  }
+  #star-4:checked ~ .footer .text::before{
+    content: "I just like it";
+  }
+  #star-4:checked ~ .footer .numb::before{
+    content: "4 out of 5";
+  }
+  #star-5:checked ~ .footer .text::before{
+    content: "I just love it";
+  }
+  #star-5:checked ~ .footer .numb::before{
+    content: "5 out of 5";
+  }
+  input[type="radio"]{
+    display: none;
+  }
+  textarea{
+    left:0rem;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      outline: none;
+      background-color: rgb(224, 213, 232);
+      border: 1px solid #333;
+      padding: 10px;
+      font-size: 17px;
+      resize: none;
+    }
+  textarea:focus{
+      border-color: #444;
+    }
+  button {
+      left:7rem;
+      align-items: center;
+      appearance: none;
+      background-image: radial-gradient(100% 100% at 100% 0, #dfd0f4 0, #c95cea 100%);
+      border: 0;
+      border-radius: 6px;
+      box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px,rgba(0, 0, 0, 0.3) 0 7px 13px -3px,rgba(0, 0, 0, 0.5) 0 -3px 0 inset;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: "JetBrains Mono",monospace;
+      height: 40px;
+      justify-content: center;
+      line-height: 1;
+      list-style: none;
+      overflow: hidden;
+      padding-left: 16px;
+      padding-right: 16px;
+      position: relative;
+      text-align: left;
+      text-decoration: none;
+      transition: box-shadow .15s,transform .15s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      white-space: nowrap;
+      will-change: box-shadow,transform;
+      font-size: 18px;
+    }
+    
+    button:focus {
+      box-shadow: #53077e 0 0 0 1.5px inset, rgba(76, 4, 148, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, #e03c3c 0 -3px 0 inset;
+    }
+    
+    button:hover {
+      box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #e1dde8 0 -3px 0 inset;
+      transform: translateY(-2px);
+    }
+    
+    button:active {
+      box-shadow: #e3e3dd 0 3px 7px inset;
+      transform: translateY(2px);
+    }
+    
+    @media screen and (max-width: 375px) {
+      .above-wrapper-image {
+        width: 90%; /* Adjust this value based on your design */
+        max-width: none;
+      }
+    
+      .wrapper {
+        max-width: 90%; /* Adjust this value based on your design */
+      }
+    }
+    
+    @media screen and (min-width: 376px) and (max-width: 540px) {
+      .above-wrapper-image {
+        width: 80%; /* Adjust this value based on your design */
+        max-width: none;
+      }
+    
+      .wrapper {
+        max-width: 80%; /* Adjust this value based on your design */
+      }
+    }
+    
+    @media screen and (min-width: 541px) and (max-width: 1024px) {
+      .above-wrapper-image {
+        width: 70%; /* Adjust this value based on your design */
+        max-width: none;
+      }
+    
+      .wrapper {
+        max-width: 70%; /* Adjust this value based on your design */
+      }
+    }
+    

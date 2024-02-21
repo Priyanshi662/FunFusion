@@ -6,10 +6,17 @@
     <title>Emoji Stars Rating</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+      body{
+        background-image: url(rating.jpg);
+        background-size: cover; 
+        background-position: center;
+      }
+    </style>
 </head>
 <body>
-  <img src="./emojis/Screenshot from 2024-02-03 15-17-44.png" alt="Your Image" class="above-wrapper-image">
-  <div class="wrapper">
+  <!--<img src="./emojis/Screenshot from 2024-02-03 15-17-44.png" alt="Your Image" class="above-wrapper-image">-->
+  <div class="wrapper" style="background: rgba(133, 52, 220, 0.1);">
     <input type="radio" name="rate" id="star-1">
     <input type="radio" name="rate" id="star-2">
     <input type="radio" name="rate" id="star-3">
@@ -30,22 +37,16 @@
         <label for="star-2" class="star-2 fas fa-star"></label>
         <label for="star-3" class="star-3 fas fa-star"></label>
         <label for="star-4" class="star-4 fas fa-star"></label>
-        <label for="star-5" class="star-5 fas fa-star"></label>
+        <label for="star-5" class="star-5 fas fa-star"></label></div><br><br>
         <form action="#">
-          <header></header>
-          <div class="textarea">
-            <textarea cols="30" placeholder="Describe your experience.."></textarea>
-          </div>
-          <div class="btn">
+            <textarea cols="30" placeholder="Describe your experience.."></textarea><br><br>
             <button type="submit"><a href="thank-you.html"> Post</a></button>
-          </div>
         </form>
-      </div>
+      
     </div>
-    <div class="footer">
+    <div class="footer" style="background-color:blueviolet;">
       <span class="text"></span>
       <span class="numb"></span>
-      
     </div>
   </div>
   
