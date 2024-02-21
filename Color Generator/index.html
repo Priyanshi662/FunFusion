@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Colour Generator</title>
     <link rel="stylesheet" href="style.css">
-    <title>Random Color generator</title>
 </head>
 <body>
-    <h2>Generate Color</h2>
-    <button>Genarate</button>
-    <br>
-    <br>
-    <br>
-    <div>Color here    <h3></h3></div>
-    <script src="app.js"></script>
+    <div class="wrapper">
+        <h1 class="heading">Random Colour Generator</h1>
+        <button class="generate">Generate</button>
+        <div class="show hide"><button class="copy">Copy</button> <span id="colorCode"></span></div>
+        <p class="hide popUp">Copied !</p>
+        <div class="box"></div>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
