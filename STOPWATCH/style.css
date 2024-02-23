@@ -57,3 +57,16 @@ body {
     transform: scale(1.06);
 }
 
+@media screen and (max-width : 500px){
+    .time, .options {
+        gap: 2rem;
+    }
+
+    .watch-container{
+        width: 25rem;
+    }
+
+    .time {
+        font-size: 4rem;
+    }
+}
