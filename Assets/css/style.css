@@ -175,7 +175,7 @@ span:nth-child(4) {
   justify-content: center;
   align-items: center;
   height: 110px;
-  width: 37vw;
+  width: 40vw;
   position: absolute;
   background: black;
   top: 10px;
@@ -233,6 +233,87 @@ span:nth-child(4) {
   ;
   width: 60%;
 }
+
+
+/* Media Query for responsiveness */
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Added for responsiveness */
+  }
+  
+  .heading {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    color: white;
+    height: 100px;
+    font-size: 10vmin;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 90%; /* Adjusted width for responsiveness */
+    max-width: 600px; /* Added for better control on larger screens */
+  }
+  
+  .outer-circle {
+    position: relative;
+    height: 130px;
+    width: 90vw; /* Adjusted width for responsiveness */
+    max-width: 400px; /* Added for better control on larger screens */
+    background: linear-gradient(#14c8ff, #ffeb3b, #ff00ee);
+    display: flex;
+    justify-content: center;
+    animation: rotate 1.5s linear infinite;
+  }
+  
+  /* Adjusted span styles... */
+  
+  .inner-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    width: 38.5vw; /* Adjusted width for responsiveness */
+     /* Added for better control on larger screens */
+    position: absolute;
+    background: black;
+    top: 10px;
+    left: 10px;
+    color: #f77737;
+    font-size: 5.9vmin;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    z-index: 9;
+  }
+  
+  /* Adjusted keyframes... */
+  
+  .search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    margin: 3% auto; /* Adjusted margin for responsiveness */
+    width: 90%; /* Adjusted width for responsiveness */
+    max-width: 600px; /* Added for better control on larger screens */
+  }
+  
+  .SearchBarBox {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .searchbtn {
+    margin-bottom: 0;
+    border: 2px solid rgb(182, 199, 243);
+  }
+  
+  .searchbtn img {
+    height: 5vmin;
+  }
+  
+}
+
+
 
 .games {
   display: flex;
@@ -414,14 +495,6 @@ span:nth-child(4) {
     text-align: center;
   }
 
-  body {
-    background: white;
-    background-image: none;
-  }
-
-  #sidebar {
-    display: inline;
-  }
 
   .Header {
     display: flex;
@@ -433,10 +506,10 @@ span:nth-child(4) {
     padding: 0;
   }
 
-  .inner-circle {
+  /* .inner-circle {
     padding: 2px 2px 2px 2px;
     width: 500px;
-  }
+  } */
 
   .Sidebar {
     right: -300px;
