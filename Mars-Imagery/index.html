@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+
+   
+}
+
+
+body{
+    background-image: linear-gradient(to left, rgb(10, 0, 73) , rgb(0, 0, 0));
+    overflow-x: hidden;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+
+  .body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.auto-typed{
+  background: -webkit-linear-gradient(#e4d6fb, #8400ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section_title{
+  background: -webkit-linear-gradient(#e4d6fb, #8400ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+#bg{
+    position:fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.input_container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+}
+
+.date_input{
+  width: 700px;
+}
+
+
+.apod_img_container{
+  
+  width: 500px;
+  height: 500px;
+}
+
+.img{
+   
+   width: 500px;
+   height: 400px;
+}
+
+.info{
+ 
+   width: 500px;
+   height: 100px;
+
+}
+
+#apod_img{
+  border-radius: 25px;
+}
+
+#apod_img:hover {
+  color: white;
+  box-shadow: 0 5px 15px #9000ff;
+}
+
+.hero_img{
+  border-radius: 50%;
+}
+
+.hero_img:hover{
+  color: rgb(191, 0, 255);
+  box-shadow: 0 5px 15px #9000ff;
+}
+
+
+.rover_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+.rover_section_text{
+  width: 50%;
+}
+
+.mars_illus{
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.mars_illus:hover{
+  color: rgb(191, 0, 255);
+  box-shadow: 0 5px 15px #ff0099;
+}
+
+
+.rover_display{
+  height: 70vh;
+  width :100%;
+  display: none;
+  justify-content: center;
+
+}
+
+.inner_conatiner{
+  height:100%;
+  width :75%;
+  border-radius: 10px;
+  border: #e4d6fb;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.image_div{
+  width: 500px;
+  height:500px;
+  margin-right: 50px;
+}
+
+#roverImg{
+  width:500px;
+  height:500px;
+  border-radius: 25px;
+
+}
+
+#roverImg:hover{
+  color: rgb(191, 0, 255);
+  box-shadow: 0 5px 15px #9000ff;
+}
+
+.info_div{
+  width: 500px;
+  height: 500px;
+  background-color: aquamarine;
+}
+
+.info_container{
+  display:flex;
+}
+
+
+
+
+/* CONTACT US SECTION STYLING */
+
+.contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .contact-form .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-form .right {
+    flex: 1;
+    padding-left: 20px;
+  }
+
+  .right .form-control {
+    width: 100%;
+    max-width: 600px; /* Adjust the maximum width as needed */
+  }
+
+  .contact_img{
+    border-radius: 50%;
+  }
+
+  .contact_img:hover{
+    color: white;
+  box-shadow: 0 5px 15px #9000ff;
+  }
+
+  /* Additional styling for responsiveness */
+  @media (max-width: 768px) {
+    .contact-form {
+      flex-direction: column;
+    }
+
+    .contact-form .right {
+      padding-left: 0;
+      margin-top: 10px; /* Adjust as needed */
+    }
+  }
+
+
+
+
+
+
+
+
+  /* Info card in mars section */
+
+  @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+
+
+.card {
+  border-radius: 10px;
+  filter: drop-shadow(0 5px 10px 0 #ffffff);
+  width: 230px;
+  height: 130px;
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-right: 10px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in;
+}
+
+.info1{
+  margin-right: 30px;
+
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -15px;
+  right: -15px;
+  background: #7952b3;
+  height:220px;
+  width: 25px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card:hover::before{
+    transition-delay:0.2s ;
+
+  transform: scale(40);
+}
+
+.card:hover{
+    color: #ffffff;
+
+}
+
+.card p{
+    padding: 10px 0;
+}
+    </style>
+</head>
+<body>
+    <h1 align="center" class="section_title" id="mars">Mars Rover Imagery</h1>
+<br>
+    <div class="rover_container">
+        <div class="rover_section_img">
+          <!-- <img src="./assets/mars.png" class="mars_illus"> -->
+        </div>
+      <div class="rover_section_text">
+      <p>Welcome to an extraordinary adventure into the Martian landscape, where we invite you to explore the wonders of the Red Planet through the lens of various rovers that have traversed its surface. Our journey takes us deep into the photographic archives, a treasure trove of captivating images captured by these robotic explorers. Each rover, armed with sophisticated cameras, has documented the Martian terrain, unveiling its mysteries one snapshot at a time.
+      
+        The heart of this exploration lies in a comprehensive database meticulously organized to offer you an unparalleled visual chronicle of Mars' exploration. This repository is a testament to the marvels of technology and the spirit of scientific curiosity that drives humanity to push the boundaries of exploration.
+        
+        But how do you, the explorer, access this vast collection? Fear not, for we present a user-friendly approach that allows you to effortlessly navigate through the visual wonders of Mars. By simply entering the Earth date corresponding to a specific photo, you unlock a portal to the Red Planet's past, witnessing moments frozen in time by the lenses of our robotic companions.
+        
+        The convenience of this method provides unparalleled flexibility, enabling you to tailor your exploration based on your interests. Whether you're drawn to the intricate geological formations that dot the Martian surface, mesmerized by the dance of atmospheric phenomena in the thin Martian air, or captivated by the milestones achieved by the rovers themselves, our immersive experience ensures that your curiosity is rewarded.
+        
+        This journey offers a deeper understanding of Mars' unique features and the scientific endeavors that drive these robotic explorers. From the striking landscapes to the subtle details that tell the story of a planet's evolution, each image contributes to our collective knowledge of the Red Planet.
+        
+        Join us in unlocking the mysteries of Mars as we navigate through the cutting-edge technology and unparalleled exploration that has brought us face to face with the enigmatic Red Planet.</p>
+      </div>
+      </div>
+
+
+<div class="rover_display">
+
+    <div class="inner_conatiner">
+      <div class="image_div">
+        <img id="roverImg" src="./assets/feel the fear and do it anyway.png">
+      </div>
+      
+      <div class="info_container">
+  
+        <div class="info1">
+          <div class="row">
+            <div class="card">
+                <h4>Earth Date</h4>
+                <p class="date">....<p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="card">
+                <h4>Rover Name</h4>
+                <p class="roverName">....<p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="card">
+                <h4>Camera</h4>
+                <p class="camera">....<p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="info2">
+          <div class="row">
+              <div class="card">
+                  <h4>Launch Date</h4>
+                  <p class="launch">....<p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card">
+                  <h4>Land Date</h4>
+                  <p class="land">....<p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card">
+                  <h4>Status</h4>
+                  <p class="status">....<p>
+              </div>
+            </div>
+        </div>
+      </div>
+  
+      
+    </div>
+  
+  </div>
+  
+  <br>
+  
+  
+  <div  class="input-group mb-4 input_container">
+    <input class="date_input" type="text" ="form-control" placeholder="Enter the date for retrieving Mars Rover Images. (YYYY-MM-DD)" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <button class="btn btn-primary mars_button" type="button" id="button-addon2" onclick="displayRover()" >Enter</button>
+  </div>
+  
+  
+  
+  
+  </div>
+
+
+  <script>
+    function displayRover(){
+
+document.querySelector('.rover_container').style.display = 'none';
+document.querySelector('.rover_display').style.display = 'flex';
+
+let userDate = document.querySelector('.date_input').value;
+
+let url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${userDate}&api_key=eISHzmGbQk7EMWv9NTlVtvzZVmeLKPUoL3uKMSPJ`
+
+fetch(url)
+.then((response) => {
+    return response.json()
+}).then((data) => {
+    console.log(data)
+   
+    let img_src = data.photos[0].img_src;
+    let date = data.photos[0].earth_date;
+    let roverName = data.photos[0].rover.name;
+    let camera = data.photos[0].camera.full_name;
+    let launch = data.photos[0].rover.launch_date;
+    let land = data.photos[0].rover.landing_date;
+    let status = data.photos[0].rover.status;
+    
+
+
+    updateDom(img_src, date, roverName, camera, launch, land, status)    
+   
+})
+.catch((error) => console.error(error))
+}
+
+function updateDom(img_src, date, roverName, camera, launch, land, status){
+
+  document.querySelector('#roverImg').src = img_src
+  document.querySelector('.date').textContent = date
+  document.querySelector('.roverName').textContent = roverName
+  document.querySelector('.camera').textContent = camera
+  document.querySelector('.land').textContent = land
+  document.querySelector('.launch').textContent = launch
+  document.querySelector('.status').textContent = status
+}
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
