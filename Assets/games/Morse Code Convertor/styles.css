@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff; /* Change text color to white */
+    background-color: #4a69bd; /* Change background color to a shade of blue */
+    transition: background-color 0.5s ease; /* Add transition for background color change */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for transform and box-shadow */
+    background-color: #fff; /* Change background color to white */
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+
+h1 {
+    color: #e74c3c; /* Change heading color to red */
+}
+
+label, textarea, button {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 4px;
+    color: #333; /* Change text color to a darker shade */
+}
+
+textarea {
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none; /* Disable textarea resizing */
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #e74c3c; /* Change button background color to red */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+    background-color: #c0392b; /* Change hover color to a darker shade of red */
+}
+
+textarea[readonly] {
+    background-color: #f5f5f5; /* Change readonly textarea background color to a light gray */
+}
+
+.error-message {
+    color: #e74c3c;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Add transition for error message color change */
+}
+
+.error-message:hover {
+    color: #c0392b; /* Change error message color on hover */
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+    }
+}
+
+#Back{
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    width: fit-content;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Converter</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <a href="../../../index.html"><button id="Back">Back</button></a>
+    <div class="container">
+        <h1>English to Morse Code Converter</h1>
+
+        <div class="converter">
+            <div class="converter-container">
+                <label for="englishInput">Enter English:</label>
+                <textarea id="englishInput" placeholder="Enter English..." rows="4"></textarea>
+                <button onclick="convertToMorse()">Convert to Morse</button>
+            </div>
+        </div>
+
+        <label for="englishOutput">Output:</label>
+        <textarea id="englishOutput" placeholder="Translation will appear here..." rows="4" readonly></textarea>
+        
+        <p class="error-message" id="errorMessage"></p>
+    </div>
+
+    <div class="container">
+        <h1>Morse Code to English Converter</h1>
+
+        <div class="converter">
+            <div class="converter-container">
+                <label for="morseInput">Enter Morse Code:</label>
+                <textarea id="morseInput" placeholder="Enter Morse Code..." rows="4"></textarea>
+                <button onclick="convertToEnglish()">Convert to English</button>
+            </div>
+        </div>
+
+        <label for="morseOutput">Output:</label>
+        <textarea id="morseOutput" placeholder="Translation will appear here..." rows="4" readonly></textarea>
+        
+        <p class="error-message" id="errorMessageMorse"></p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
